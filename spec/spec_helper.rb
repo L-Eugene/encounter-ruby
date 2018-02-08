@@ -7,7 +7,7 @@ WebMock.disable_net_connect!(allow_localhost: true)
 RSpec.configure do |config|
   config.before(:each) do
     stub_request(:any, /test.en.cx/).to_rack(FakeTestEnCx)
-    fn = "#{File.dirname(__FILE__)}/support/fixtures/nodomain.en.cx_index.html"
+    fn = "#{File.dirname(__FILE__)}/support/fixtures/nodomain.en.cx_index.txt"
     stub_request(:any, /nodomain.en.cx/).to_return(
       status: 200,
       body: File.open(fn),
