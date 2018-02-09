@@ -43,13 +43,11 @@ module Encounter
         proc: proc { |r| r == 'Мужской' ? :male : :female }
       },
       {
-        id: "#{ID_PREFIX_INF}_lblHeightVal",
-        attr: 'height',
+        id: "#{ID_PREFIX_INF}_lblHeightVal", attr: 'height',
         proc: proc { |r| r.to_i }
       },
       {
-        id: "#{ID_PREFIX_TRA}_lblDrvLicenseVal",
-        attr: 'driver_license',
+        id: "#{ID_PREFIX_TRA}_lblDrvLicenseVal", attr: 'driver_license',
         proc: proc { |r| r.scan(/[A-Z]/).map(&:to_sym) }
       },
       { id: "#{ID_PREFIX_LOC}_CountryText", attr: 'country' },
@@ -59,21 +57,18 @@ module Encounter
 
     def parse_avatar(obj)
       o = obj.css('#enUserDetailsPanel_lnkAvatarEdit img').first
-      {
-        avatar: o['src'],
-        name: o.parent.parent.next_element.css('td span').first.text
-      }
+      n = o.parent.parent.next_element.css('td span').first.text
+      { avatar: o['src'], name: n }
     end
 
     def parse_birthday(obj)
-      date = []
-      unless obj.css("##{ID_PREFIX_INF}_lblBirthDateTextVal").empty?
-        date << obj.css("##{ID_PREFIX_INF}_lblBirthDateTextVal").first.text
-      end
-      unless obj.css("##{ID_PREFIX_INF}_lblBirthYearTextVal").empty?
-        date << obj.css("##{ID_PREFIX_INF}_lblBirthYearTextVal").first.text
-      end
-      { birthday: date.join(' ') }
+      {
+        birthday: %w[Date Year].map do |x|
+                    id = "##{ID_PREFIX_INF}_lblBirth#{x}TextVal"
+                    next if obj.css(id).empty?
+                    obj.css(id).first.text
+                  end.compact.join(' ')
+      }
     end
 
     def parse_email(obj)
@@ -108,8 +103,7 @@ module Encounter
     def parse_attributes(obj)
       Hash[
         PARSER_OBJECTS.map do |o|
-          id = "##{o[:id]}"
-          res = obj.css(id).empty? ? '' : obj.css(id).first.text
+          res = obj.css("##{o[:id]}").map(&:text).join
           res = o[:proc].call(res) if o[:proc]
           [o[:attr], res]
         end
@@ -117,8 +111,7 @@ module Encounter
     end
 
     def load_data
-      html_page = @conn.page_get('/UserDetails.aspx', uid: uid)
-      dom_page = Nokogiri::HTML(html_page)
+      dom_page = Nokogiri::HTML(@conn.page_get('/UserDetails.aspx', uid: uid))
 
       raise 'No such player' unless dom_page.css('form#MainForm').empty?
       assign_values parse_all(dom_page.css('td#tdContentCenter').first)
