@@ -21,7 +21,7 @@ class FakeTestEnCx < Sinatra::Base
   get '/UserDetails.aspx' do
     content_type 'text/html'
     dir = File.dirname(__FILE__)
-    fn = "#{dir}/fixtures/test.en.cx_user_#{request.params['uid']}.txt"
+    fn = "#{dir}/fixtures/test.en.cx_player_#{request.params['uid']}.txt"
     File.open(fn)
   end
 
