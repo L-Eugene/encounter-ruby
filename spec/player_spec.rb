@@ -46,7 +46,9 @@ describe Encounter::Player do
   end
   
   it 'Should raise if user does not exists' do
-    expect{ Encounter::Player.new(@conn, uid: 6) }.to raise_error(RuntimeError)
+    expect{
+      Encounter::Player.new(@conn, uid: 6).name
+    }.to raise_error(RuntimeError)
   end
 end
 
