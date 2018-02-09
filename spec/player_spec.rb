@@ -12,7 +12,9 @@ describe Encounter::Player do
     expect(pl.points).to eq 729.63
     expect(pl.first_name).to eq 'Иван'
     expect(pl.last_name).to eq ''
-    
+
+    expect(pl.email).to eq ''
+
     expect(pl.country).to eq 'Беларусь'
     expect(pl.region).to eq 'Минская обл.'
     expect(pl.city).to eq 'Минск'
