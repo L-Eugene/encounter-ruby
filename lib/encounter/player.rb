@@ -10,7 +10,10 @@ module Encounter
                      :height, :weight, :email, :mobile_phone, :website, :skype,
                      :driver_license, :transport
 
-    define_export_attrs :uid, :name
+    define_export_attrs :uid, :name, :avatar, :points, :first_name,
+                        :patronymic_name, :last_name, :country, :region, :city,
+                        :sex, :birthday, :height, :weight, :email, :website,
+                        :mobile_phone, :skype, :driver_license, :transport
 
     define_parser_list :parse_avatar, :parse_birthday, :parse_attributes,
                        :parse_email, :parse_transport
@@ -29,16 +32,14 @@ module Encounter
 
     PARSER_OBJECTS = [
       {
-        id: 'enUserDetailsPanel_lblPointsVal',
-        attr: 'points',
+        id: 'enUserDetailsPanel_lblPointsVal', attr: 'points',
         proc: proc { |r| r.tr(',', '.').to_f }
       },
       { id: "#{ID_PREFIX_INF}_lblFirstNameVal", attr: 'first_name' },
       { id: "#{ID_PREFIX_INF}_lblPatronymicNameVal", attr: 'patronymic_name' },
       { id: "#{ID_PREFIX_INF}_lblLastNameVal", attr: 'last_name' },
       {
-        id: "#{ID_PREFIX_INF}_lblGenderTextVal",
-        attr: 'sex',
+        id: "#{ID_PREFIX_INF}_lblGenderTextVal", attr: 'sex',
         proc: proc { |r| r == 'Мужской' ? :male : :female }
       },
       {
