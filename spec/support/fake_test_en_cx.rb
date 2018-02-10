@@ -18,6 +18,13 @@ class FakeTestEnCx < Sinatra::Base
     File.open(fn)
   end
 
+  get '/UserDetails.aspx' do
+    content_type 'text/html'
+    dir = File.dirname(__FILE__)
+    fn = "#{dir}/fixtures/test.en.cx_player_#{request.params['uid']}.txt"
+    File.open(fn)
+  end
+
   post '/login/signin' do
     content_type :json
 
