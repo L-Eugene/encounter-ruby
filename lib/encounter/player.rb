@@ -1,5 +1,47 @@
 module Encounter
   # Class for player information
+  #
+  # @!attribute [r] uid
+  #   @return [Integer] User ID
+  # @!attribute [r] name
+  #   @return [String] Player nickname
+  # @!attribute [r] avatar
+  #   @return [String] URL to user's avatar
+  # @!attribute [r] points
+  #   @return [Integer] Game points
+  # @!attribute [r] first_name
+  #   @return [String] First name
+  # @!attribute [r] patronymic_name
+  #   @return [String] Patronymic name
+  # @!attribute [r] last_name
+  #   @return [String] Last name
+  # @!attribute [r] country
+  #   @return [String] Player's home country
+  # @!attribute [r] region
+  #   @return [String] Player's home region/province
+  # @!attribute [r] city
+  #   @return [String] Player's home city
+  # @!attribute [r] sex
+  #   @return [Symbol] Player's gender. Either _:male_ or _:female_
+  # @!attribute [r] birthday
+  #   @return [String] Birthday date
+  # @!attribute [r] height
+  #   @return [Integer] Height in cm
+  # @!attribute [r] weight
+  #   @return [Integer] Weight in kg
+  # @!attribute [r] email
+  #   @return [String] E-Mail address
+  # @!attribute [r] mobile_phone
+  #   @return [String] Mobile phone number
+  # @!attribute [r] website
+  #   @return [String] Website URL
+  # @!attribute [r] skype
+  #   @return [String] Skype username
+  # @!attribute [r] driver_license
+  #   @return [Array<Symbol>] Array of driver license categories
+  # @!attribute [r] transport
+  #   @return [Array<Hash>] Array of hashes containing info about transport.
+  #     Hash can contain _type_, _brand_, _model_, _number_ and _photo_.
   class Player < Encounter::Base
     include Encounter::HTMLParser
 
@@ -18,18 +60,32 @@ module Encounter
     define_parser_list :parse_avatar, :parse_birthday, :parse_attributes,
                        :parse_email, :parse_transport
 
+    # @param [Encounter::Connection] conn
+    # @param [Hash] params You can pass values in this parameters to predefine
+    #   attributes. Any class attribute can be set.
+    # @option params [Integer] :uid User ID. <b>Required option</b>
+    #
+    # @return [Encounter::Player] New object
+    # @raise [ArgumentError] Raised if connection is not given
+    # @raise [ArgumentError] Raised if :uid option is not defined
     def initialize(conn, params)
       raise ArgumentError, ':uid is needed' unless params.key? :uid
 
       super(conn, params)
     end
 
+    # @private
     ID_PREFIX = 'EnTabContainer1_content_ctl00_panelLine'.freeze
+    # @private
     ID_PREFIX_INF = "#{ID_PREFIX}PersonalData_personalDataBlock".freeze
+    # @private
     ID_PREFIX_CON = "#{ID_PREFIX}Contacts_contactsBlock".freeze
+    # @private
     ID_PREFIX_TRA = "#{ID_PREFIX}Transport_transportBlock".freeze
+    # @private
     ID_PREFIX_LOC = "#{ID_PREFIX}Location_locationBlock".freeze
 
+    # @private
     PARSER_OBJECTS = [
       {
         id: 'enUserDetailsPanel_lblPointsVal', attr: 'points',

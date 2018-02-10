@@ -61,7 +61,7 @@ module Encounter
     #
     # @todo Parse :play_by value
     #
-    # @return [Encounter::Calendar] New object
+    # @return [Encounter::Game] New object
     # @raise [ArgumentError] Raised if connection is not given
     # @raise [ArgumentError] Raised if :domain or :gid option is not defined
     def initialize(conn, params)
