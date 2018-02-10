@@ -1,5 +1,47 @@
 module Encounter
   # Class for player information
+  #
+  # @!attribute [r] uid
+  #   @return [Integer] User ID
+  # @!attribute [r] name
+  #   @return [String] Player nickname
+  # @!attribute [r] avatar
+  #   @return [String] URL to user's avatar
+  # @!attribute [r] points
+  #   @return [Integer] Game points
+  # @!attribute [r] first_name
+  #   @return [String] First name
+  # @!attribute [r] patronymic_name
+  #   @return [String] Patronymic name
+  # @!attribute [r] last_name
+  #   @return [String] Last name
+  # @!attribute [r] country
+  #   @return [String] Player's home country
+  # @!attribute [r] region
+  #   @return [String] Player's home region/province
+  # @!attribute [r] city
+  #   @return [String] Player's home city
+  # @!attribute [r] sex
+  #   @return [Symbol] Player's gender. Either _:male_ or _:female_
+  # @!attribute [r] birthday
+  #   @return [String] Birthday date
+  # @!attribute [r] height
+  #   @return [Integer] Height in cm
+  # @!attribute [r] weight
+  #   @return [Integer] Weight in kg
+  # @!attribute [r] email
+  #   @return [String] E-Mail address
+  # @!attribute [r] mobile_phone
+  #   @return [String] Mobile phone number
+  # @!attribute [r] website
+  #   @return [String] Website URL
+  # @!attribute [r] skype
+  #   @return [String] Skype username
+  # @!attribute [r] driver_license
+  #   @return [Array<Symbol>] Array of driver license categories
+  # @!attribute [r] transport
+  #   @return [Array<Hash>] Array of hashes containing info about transport.
+  #     Hash can contain _type_, _brand_, _model_, _number_ and _photo_.
   class Player < Encounter::Base
     include Encounter::HTMLParser
 
