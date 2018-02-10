@@ -7,7 +7,8 @@ module Encounter
 
     lazy_attr_reader :name, :avatar, :points, :first_name, :patronymic_name,
                      :last_name, :country, :region, :city, :sex, :birthday,
-                     :height, :email, :driver_license, :transport
+                     :height, :weight, :email, :mobile_phone, :website, :skype,
+                     :driver_license, :transport
 
     define_export_attrs :uid, :name
 
@@ -19,8 +20,6 @@ module Encounter
 
       super(conn, params)
     end
-
-    private
 
     ID_PREFIX = 'EnTabContainer1_content_ctl00_panelLine'.freeze
     ID_PREFIX_INF = "#{ID_PREFIX}PersonalData_personalDataBlock".freeze
@@ -47,13 +46,21 @@ module Encounter
         proc: proc { |r| r.to_i }
       },
       {
+        id: "#{ID_PREFIX_INF}_lblWeightVal", attr: 'weight',
+        proc: proc { |r| r.to_i }
+      },
+      {
         id: "#{ID_PREFIX_TRA}_lblDrvLicenseVal", attr: 'driver_license',
         proc: proc { |r| r.scan(/[A-Z]/).map(&:to_sym) }
       },
+      { id: "#{ID_PREFIX_CON}_lblMobilePhoneVal", attr: 'mobile_phone' },
+      { id: "#{ID_PREFIX_CON}_SkypeValue", attr: 'skype' },
       { id: "#{ID_PREFIX_LOC}_CountryText", attr: 'country' },
       { id: "#{ID_PREFIX_LOC}_ProvinceText", attr: 'region' },
       { id: "#{ID_PREFIX_LOC}_CityText", attr: 'city' }
     ].freeze
+
+    private
 
     def parse_avatar(obj)
       o = obj.css('#enUserDetailsPanel_lnkAvatarEdit img').first
@@ -72,8 +79,12 @@ module Encounter
     end
 
     def parse_email(obj)
-      id = "##{ID_PREFIX_CON}_lblEmailVal noscript"
-      { email: obj.css(id).map(&:text).join }
+      idml = "##{ID_PREFIX_CON}_lblEmailVal noscript"
+      idws = "##{ID_PREFIX_CON}_lWebSiteValue"
+      {
+        email: obj.css(idml).map(&:text).join,
+        website: obj.css(idws).map { |r| r['href'] }.join
+      }
     end
 
     def parse_car_field(obj, id, field)
@@ -98,16 +109,6 @@ module Encounter
           parse_car obj, id
         end.compact
       }
-    end
-
-    def parse_attributes(obj)
-      Hash[
-        PARSER_OBJECTS.map do |o|
-          res = obj.css("##{o[:id]}").map(&:text).join
-          res = o[:proc].call(res) if o[:proc]
-          [o[:attr], res]
-        end
-      ]
     end
 
     def load_data
