@@ -60,18 +60,32 @@ module Encounter
     define_parser_list :parse_avatar, :parse_birthday, :parse_attributes,
                        :parse_email, :parse_transport
 
+    # @param [Encounter::Connection] conn
+    # @param [Hash] params You can pass values in this parameters to predefine
+    #   attributes. Any class attribute can be set.
+    # @option params [Integer] :uid User ID. <b>Required option</b>
+    #
+    # @return [Encounter::Player] New object
+    # @raise [ArgumentError] Raised if connection is not given
+    # @raise [ArgumentError] Raised if :uid option is not defined
     def initialize(conn, params)
       raise ArgumentError, ':uid is needed' unless params.key? :uid
 
       super(conn, params)
     end
 
+    # @private
     ID_PREFIX = 'EnTabContainer1_content_ctl00_panelLine'.freeze
+    # @private
     ID_PREFIX_INF = "#{ID_PREFIX}PersonalData_personalDataBlock".freeze
+    # @private
     ID_PREFIX_CON = "#{ID_PREFIX}Contacts_contactsBlock".freeze
+    # @private
     ID_PREFIX_TRA = "#{ID_PREFIX}Transport_transportBlock".freeze
+    # @private
     ID_PREFIX_LOC = "#{ID_PREFIX}Location_locationBlock".freeze
 
+    # @private
     PARSER_OBJECTS = [
       {
         id: 'enUserDetailsPanel_lblPointsVal', attr: 'points',
