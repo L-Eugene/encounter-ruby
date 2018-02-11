@@ -87,10 +87,7 @@ module Encounter
 
     # @private
     PARSER_OBJECTS = [
-      {
-        id: '#enUserDetailsPanel_lblPointsVal', attr: 'points',
-        proc: proc { |r| r.tr(',', '.').tr(' ', '').to_f }
-      },
+      { id: '#enUserDetailsPanel_lblPointsVal', attr: 'points', type: 'f' },
       { id: "##{ID_PREFIX_INF}_lblFirstNameVal", attr: 'first_name' },
       { id: "##{ID_PREFIX_INF}_lblPatronymicNameVal", attr: 'patronymic_name' },
       { id: "##{ID_PREFIX_INF}_lblLastNameVal", attr: 'last_name' },
@@ -98,14 +95,8 @@ module Encounter
         id: "##{ID_PREFIX_INF}_lblGenderTextVal", attr: 'sex',
         proc: proc { |r| r == 'Мужской' ? :male : :female }
       },
-      {
-        id: "##{ID_PREFIX_INF}_lblHeightVal", attr: 'height',
-        proc: proc { |r| r.to_i }
-      },
-      {
-        id: "##{ID_PREFIX_INF}_lblWeightVal", attr: 'weight',
-        proc: proc { |r| r.to_i }
-      },
+      { id: "##{ID_PREFIX_INF}_lblHeightVal", attr: 'height', type: 'i' },
+      { id: "##{ID_PREFIX_INF}_lblWeightVal", attr: 'weight', type: 'i' },
       {
         id: "##{ID_PREFIX_TRA}_lblDrvLicenseVal", attr: 'driver_license',
         proc: proc { |r| r.scan(/[A-Z]/).map(&:to_sym) }
