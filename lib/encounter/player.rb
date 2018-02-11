@@ -88,33 +88,33 @@ module Encounter
     # @private
     PARSER_OBJECTS = [
       {
-        id: 'enUserDetailsPanel_lblPointsVal', attr: 'points',
-        proc: proc { |r| r.tr(',', '.').to_f }
+        id: '#enUserDetailsPanel_lblPointsVal', attr: 'points',
+        proc: proc { |r| r.tr(',', '.').tr(' ', '').to_f }
       },
-      { id: "#{ID_PREFIX_INF}_lblFirstNameVal", attr: 'first_name' },
-      { id: "#{ID_PREFIX_INF}_lblPatronymicNameVal", attr: 'patronymic_name' },
-      { id: "#{ID_PREFIX_INF}_lblLastNameVal", attr: 'last_name' },
+      { id: "##{ID_PREFIX_INF}_lblFirstNameVal", attr: 'first_name' },
+      { id: "##{ID_PREFIX_INF}_lblPatronymicNameVal", attr: 'patronymic_name' },
+      { id: "##{ID_PREFIX_INF}_lblLastNameVal", attr: 'last_name' },
       {
-        id: "#{ID_PREFIX_INF}_lblGenderTextVal", attr: 'sex',
+        id: "##{ID_PREFIX_INF}_lblGenderTextVal", attr: 'sex',
         proc: proc { |r| r == 'Мужской' ? :male : :female }
       },
       {
-        id: "#{ID_PREFIX_INF}_lblHeightVal", attr: 'height',
+        id: "##{ID_PREFIX_INF}_lblHeightVal", attr: 'height',
         proc: proc { |r| r.to_i }
       },
       {
-        id: "#{ID_PREFIX_INF}_lblWeightVal", attr: 'weight',
+        id: "##{ID_PREFIX_INF}_lblWeightVal", attr: 'weight',
         proc: proc { |r| r.to_i }
       },
       {
-        id: "#{ID_PREFIX_TRA}_lblDrvLicenseVal", attr: 'driver_license',
+        id: "##{ID_PREFIX_TRA}_lblDrvLicenseVal", attr: 'driver_license',
         proc: proc { |r| r.scan(/[A-Z]/).map(&:to_sym) }
       },
-      { id: "#{ID_PREFIX_CON}_lblMobilePhoneVal", attr: 'mobile_phone' },
-      { id: "#{ID_PREFIX_CON}_SkypeValue", attr: 'skype' },
-      { id: "#{ID_PREFIX_LOC}_CountryText", attr: 'country' },
-      { id: "#{ID_PREFIX_LOC}_ProvinceText", attr: 'region' },
-      { id: "#{ID_PREFIX_LOC}_CityText", attr: 'city' }
+      { id: "##{ID_PREFIX_CON}_lblMobilePhoneVal", attr: 'mobile_phone' },
+      { id: "##{ID_PREFIX_CON}_SkypeValue", attr: 'skype' },
+      { id: "##{ID_PREFIX_LOC}_CountryText", attr: 'country' },
+      { id: "##{ID_PREFIX_LOC}_ProvinceText", attr: 'region' },
+      { id: "##{ID_PREFIX_LOC}_CityText", attr: 'city' }
     ].freeze
 
     private

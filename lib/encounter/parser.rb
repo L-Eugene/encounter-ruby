@@ -25,7 +25,7 @@ module Encounter
     def parse_attributes(obj)
       Hash[
         self.class::PARSER_OBJECTS.map do |o|
-          res = obj.css("##{o[:id]}").map(&:text).join
+          res = obj.css("#{o[:id]}").map(&:text).join
           res = o[:proc].call(res) if o[:proc]
           [o[:attr], res]
         end
