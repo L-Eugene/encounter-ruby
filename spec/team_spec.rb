@@ -10,9 +10,9 @@ describe Encounter::Team do
 
     expect(t.name).to eq 'Infe®no'
     expect(t.created_at).to eq '7 декабря 2005'
-    expect(t.players).to eq 29
+    expect(t.players_count).to eq 29
     expect(t.points).to eq 6538.16
-    expect(t.games).to eq 200
+    expect(t.games_count).to eq 200
     expect(t.wins).to eq 53
     expect(t.anthem).to eq 'http://cdn.endata.cx/data/teams/hymns/528.mp3'
     expect(t.website).to eq 'http://inferno.encounter.by'
@@ -24,6 +24,7 @@ describe Encounter::Team do
 
     expect(t.captain.class).to be Encounter::Player
     expect(t.captain.uid).to eq 4_203
+    expect(t.captain.name).to eq '!!*Mag*!!'
 
     expect(t.active.size).to eq 4
     expect(t.active[1].uid).to eq 19_350
