@@ -86,7 +86,7 @@ module Encounter
         authors: as.map do |a|
                    Encounter::Player.new(
                      @conn,
-                     uid: a['href'].match(/uid=(\d*)/).captures.first.to_i,
+                     uid: parse_url_id(a['href']),
                      name: a.text
                    )
                  end
@@ -146,7 +146,7 @@ module Encounter
     def parse_player(a)
       usr = a['href'] =~ /UserDetails/
       klass = usr ? Encounter::Player : Encounter::Team
-      tid = a['href'].match(/[ut]id=(\d+)/).captures.first.to_i
+      tid = parse_url_id(a['href'])
       params = { uid: tid } if usr
       params = { tid: tid } unless usr
 

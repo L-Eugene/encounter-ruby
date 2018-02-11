@@ -34,7 +34,7 @@ module Encounter
       res = parse_calendar_page
       @page_number = parse_page_count
       return res if filter.key? :page
-      (2..@page_number).each do |page_num|
+      2.upto(@page_number) do |page_num|
         load_page(filter.merge(page: page_num))
         res += parse_calendar_page
       end
@@ -79,10 +79,7 @@ module Encounter
     end
 
     def parse_gid(tr)
-      {
-        gid: tr.css('td:eq(6) a').first['href']
-               .match(/gid=(\d*)/).captures.first.to_i
-      }
+      { gid: parse_url_id(tr.css('td:eq(6) a').first['href']) }
     end
 
     def parse_authors(tr)
@@ -91,7 +88,7 @@ module Encounter
           Encounter::Player.new(
             @conn,
             name: a.text,
-            uid: a.attr('href').match(/uid=(\d*)/).captures.first.to_i
+            uid: parse_url_id(a['href'])
           )
         end
       }

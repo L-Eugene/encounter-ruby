@@ -87,7 +87,7 @@ module Encounter
 
     def parse_captain(obj)
       obj = obj.css('#lnkCaptainInfo').first
-      uid = obj['href'].match(/uid=(\d*)/).captures.first.to_i
+      uid = parse_url_id(obj['href'])
       { captain: Encounter::Player.new(@conn, uid: uid, name: obj.text) }
     end
 
@@ -96,7 +96,7 @@ module Encounter
         active: obj.css('#aspnetForm table:eq(2) tr td:eq(4) a').map do |x|
                   Encounter::Player.new(
                     @conn,
-                    uid: x['href'].match(/uid=(\d*)/).captures.first.to_i,
+                    uid: parse_url_id(x['href']),
                     name: x.text
                   )
                 end
@@ -108,7 +108,7 @@ module Encounter
         reserve: obj.css('#aspnetForm table:eq(3) tr td:eq(4) a').map do |x|
                    Encounter::Player.new(
                      @conn,
-                     uid: x['href'].match(/uid=(\d*)/).captures.first.to_i,
+                     uid: parse_url_id(x['href']),
                      name: x.text
                    )
                  end
