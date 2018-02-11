@@ -1,5 +1,6 @@
 module Encounter
   # parser for html pages
+  # @private
   module HTMLParser
     def self.included(base)
       base.extend Encounter::ParserClassMethods
@@ -25,7 +26,8 @@ module Encounter
     def parse_attributes(obj)
       Hash[
         self.class::PARSER_OBJECTS.map do |o|
-          res = obj.css("#{o[:id]}").map(&:text).join
+          res = obj.css(o[:id]).map(&:text).join
+          res = ParserConvertors.send("to_#{o[:type]}", res) if o[:type]
           res = o[:proc].call(res) if o[:proc]
           [o[:attr], res]
         end
@@ -34,6 +36,7 @@ module Encounter
   end
 
   # class method for parser
+  # @private
   module ParserClassMethods
     def define_parser_list(*items)
       list = []
@@ -45,5 +48,18 @@ module Encounter
         list.freeze
       end
     end
+  end
+
+  # @private
+  module ParserConvertors
+    def to_f(v)
+      v.tr(',', '.').gsub(/[^0-9\.]/, '').to_f
+    end
+
+    def to_i(v)
+      v.gsub(/\D/, '').to_i
+    end
+
+    module_function :to_f, :to_i
   end
 end
