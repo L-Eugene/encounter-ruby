@@ -8,11 +8,14 @@ module Encounter
     attr_reader :tid
 
     lazy_attr_reader :name, :created_at, :players, :points, :games, :wins,
-                     :anthem, :website, :forum
+                     :anthem, :website, :forum, :captain, :active, :reserve
 
-    define_export_attrs :tid, :name
+    define_export_attrs :tid, :name, :created_at, :players, :points, :games,
+                        :wins, :anthem, :website, :forum, :captain, :active,
+                        :reserve
 
-    define_parser_list :parse_attributes, :parse_anthem, :parse_urls
+    define_parser_list :parse_attributes, :parse_anthem, :parse_urls, 
+                       :parse_captain, :parse_active, :parse_reserve
 
     def initialize(conn, params)
       raise ArgumentError, ':tid is needed' unless params.key? :tid
@@ -42,6 +45,32 @@ module Encounter
       {
         website: obj.css('#lnkWebSite').map { |r| r['href'] }.join,
         forum: obj.css('#lnkForum').map { |r| r['href'] }.join
+      }
+    end
+    
+    def parse_captain(obj)
+      uid = obj.css('#lnkCaptainInfo').first['href'].match(/uid=(\d*)/)
+               .captures.first.to_i
+      { captain: Encounter::Player.new(@conn, uid: uid) }
+    end
+
+    def parse_active(obj)
+      {
+        active: obj.css("#aspnetForm table:eq(2) tr td:eq(4) a").map do |x|
+                  Encounter::Player.new(
+                    @conn,
+                    uid: x['href'].match(/uid=(\d*)/).captures.first.to_i)
+                end
+      }
+    end
+
+    def parse_reserve(obj)
+      {
+        reserve: obj.css("#aspnetForm table:eq(3) tr td:eq(4) a").map do |x|
+                    Encounter::Player.new(
+                      @conn,
+                      uid: x['href'].match(/uid=(\d*)/).captures.first.to_i)
+                  end
       }
     end
 
