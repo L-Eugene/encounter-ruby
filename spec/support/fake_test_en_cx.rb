@@ -1,27 +1,32 @@
 require 'sinatra/base'
 
 class FakeTestEnCx < Sinatra::Base
+  DIR = "#{File.dirname(__FILE__)}/fixtures".freeze
+
   get '/GameCalendar.aspx' do
     content_type 'text/html'
     status = request.params['status'].downcase
-    dir = File.dirname(__FILE__)
     zone = request.params['zone'].downcase
     page = request.params['page'] || 1
-    fn = "#{dir}/fixtures/test.en.cx_calendar_#{status}_#{zone}_p#{page}.txt"
+    fn = "#{DIR}/test.en.cx_calendar_#{status}_#{zone}_p#{page}.txt"
     File.open(fn)
   end
 
   get '/GameDetails.aspx' do
     content_type 'text/html'
-    dir = File.dirname(__FILE__)
-    fn = "#{dir}/fixtures/test.en.cx_game_#{request.params['gid']}.txt"
+    fn = "#{DIR}/test.en.cx_game_#{request.params['gid']}.txt"
     File.open(fn)
   end
 
   get '/UserDetails.aspx' do
     content_type 'text/html'
-    dir = File.dirname(__FILE__)
-    fn = "#{dir}/fixtures/test.en.cx_player_#{request.params['uid']}.txt"
+    fn = "#{DIR}/test.en.cx_player_#{request.params['uid']}.txt"
+    File.open(fn)
+  end
+
+  get '/Teams/TeamDetails.aspx' do
+    content_type 'text/html'
+    fn = "#{DIR}/test.en.cx_team_#{request.params['tid']}.txt"
     File.open(fn)
   end
 
@@ -51,7 +56,6 @@ class FakeTestEnCx < Sinatra::Base
   end
 
   get '/' do
-    dir = File.dirname(__FILE__)
-    File.open("#{dir}/fixtures/test.en.cx_index.txt")
+    File.open("#{DIR}/test.en.cx_index.txt")
   end
 end
