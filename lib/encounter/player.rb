@@ -50,7 +50,7 @@ module Encounter
     lazy_attr_reader :name, :avatar, :points, :first_name, :patronymic_name,
                      :last_name, :country, :region, :city, :sex, :birthday,
                      :height, :weight, :email, :mobile_phone, :website, :skype,
-                     :driver_license, :transport
+                     :driver_license, :transport, :team_status, :team
 
     define_export_attrs :uid, :name, :avatar, :points, :first_name,
                         :patronymic_name, :last_name, :country, :region, :city,
@@ -58,7 +58,7 @@ module Encounter
                         :mobile_phone, :skype, :driver_license, :transport
 
     define_parser_list :parse_avatar, :parse_birthday, :parse_attributes,
-                       :parse_email, :parse_transport
+                       :parse_email, :parse_transport, :parse_team
 
     # @param [Encounter::Connection] conn
     # @param [Hash] params You can pass values in this parameters to predefine
@@ -120,8 +120,7 @@ module Encounter
       {
         birthday: %w[Date Year].map do |x|
                     id = "##{ID_PREFIX_INF}_lblBirth#{x}TextVal"
-                    next if obj.css(id).empty?
-                    obj.css(id).first.text
+                    obj.css(id).first.text unless obj.css(id).empty?
                   end.compact.join(' ')
       }
     end
@@ -153,9 +152,20 @@ module Encounter
       {
         transport: (1..15).map do |i|
           id = "##{ID_PREFIX_TRA}_TransportRepeater_ctl#{i.to_s.rjust(2, '0')}"
-          next if obj.css("#{id}_TransportTypeText").empty?
-          parse_car obj, id
+          parse_car(obj, id) unless obj.css("#{id}_TransportTypeText").empty?
         end.compact
+      }
+    end
+
+    def parse_team(obj)
+      obj = obj.css('#enUserDetailsPanel_lnkDomain').first
+               .parent.parent.next_element
+
+      status = :captain if obj.text.include? 'капитан'
+      status = :player if obj.text.include? 'команде'
+      {
+        team_status: status || :single,
+        team: status ? parse_url_object(obj.css('a').first) : nil
       }
     end
 

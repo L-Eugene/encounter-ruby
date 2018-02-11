@@ -5,7 +5,7 @@ describe Encounter::Player do
     @conn = Encounter::Connection.new(domain: 'test.en.cx')
   end
 
-  it 'Should load existing player' do
+  it 'should load existing player' do
     pl = Encounter::Player.new(@conn, uid: 1)
     expect(pl.name).to eq 'im'
     expect(pl.avatar).to eq 'http://cdn.endata.cx/data/user/0/0/1/personal/a_chwrxP.jpg'
@@ -18,9 +18,12 @@ describe Encounter::Player do
     expect(pl.country).to eq 'Беларусь'
     expect(pl.region).to eq 'Минская обл.'
     expect(pl.city).to eq 'Минск'
+    
+    expect(pl.team_status).to eq :captain
+    expect(pl.team.tid).to eq 231
   end
 
-  it 'Should load all possible information' do
+  it 'should load all possible information' do
     pl = Encounter::Player.new(@conn, uid: 144762)
     expect(pl.first_name).to eq 'Дмитрий'
     expect(pl.patronymic_name).to eq 'Александрович'
@@ -41,13 +44,22 @@ describe Encounter::Player do
       model: 'Carina',
       number: 'М694КО'
     )
+    
+    expect(pl.team_status).to eq :player
+    expect(pl.team.tid).to eq 14_567
   end
 
-  it 'Should raise if no :uid given' do
+  it 'should parse team of single player as nil' do
+    pl = Encounter::Player.new(@conn, uid: 7)
+    expect(pl.team_status).to eq :single
+    expect(pl.team).to be_nil
+  end
+
+  it 'should raise if no :uid given' do
     expect{ Encounter::Player.new(@conn, {}) }.to raise_error(ArgumentError)
   end
   
-  it 'Should raise if user does not exists' do
+  it 'should raise if user does not exists' do
     expect{
       Encounter::Player.new(@conn, uid: 6).name
     }.to raise_error(RuntimeError)
