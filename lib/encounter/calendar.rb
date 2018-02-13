@@ -53,7 +53,7 @@ module Encounter
                        :parse_authors, :parse_money
 
     # Collect Game objects from HTML page
-    # 
+    #
     # @return [Array<Encounter::Game>] list of games from given page.
     def parse_calendar_page
       dom_page.css('table.tabCalContainer tr.infoRow').map do |tr|
@@ -100,11 +100,7 @@ module Encounter
     def parse_authors(tr)
       {
         authors: tr.css('td:eq(7)').first.css('a').map do |a|
-          Encounter::Player.new(
-            @conn,
-            name: a.text,
-            uid: parse_url_id(a['href'])
-          )
+          parse_url_object(a)
         end
       }
     end

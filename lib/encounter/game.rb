@@ -82,15 +82,7 @@ module Encounter
 
     def parse_authors(table)
       as = table.css('a').select { |a| a['id'] && a['id'].match(/lnkAuthor$/) }
-      {
-        authors: as.map do |a|
-                   Encounter::Player.new(
-                     @conn,
-                     uid: parse_url_id(a['href']),
-                     name: a.text
-                   )
-                 end
-      }
+      { authors: as.map { |a| parse_url_object(a) } }
     end
 
     def parse_game_type(table)
@@ -140,17 +132,7 @@ module Encounter
     end
 
     def parse_player_list(div)
-      div.css('a').map { |a| parse_player(a) }
-    end
-
-    def parse_player(a)
-      usr = a['href'] =~ /UserDetails/
-      klass = usr ? Encounter::Player : Encounter::Team
-      tid = parse_url_id(a['href'])
-      params = { uid: tid } if usr
-      params = { tid: tid } unless usr
-
-      klass.new conn, params.merge(name: a.text)
+      div.css('a').map { |a| parse_url_object(a) }
     end
 
     def load_data

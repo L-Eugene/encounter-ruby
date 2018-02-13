@@ -35,13 +35,11 @@ module Encounter
     #
     # @param [Array<Symbol>] items List of attributet names.
     def self.define_export_attrs(*items)
-      list = []
-      items.each do |item|
-        raise ArgumentError, 'Want symbol parameters' unless item.is_a? Symbol
-        list << item
+      unless items.all? { |x| x.is_a? Symbol }
+        raise ArgumentError, 'Want symbol parameters'
       end
       define_method(:export_fields) do
-        list.freeze
+        items.freeze
       end
     end
 
