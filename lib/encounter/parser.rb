@@ -24,14 +24,14 @@ module Encounter
     end
 
     # Parse standard text attributes.
-    # List of attributes is given in _PARSER_OBJECTS_ constant. 
+    # List of attributes is given in _PARSER_OBJECTS_ constant.
     # Every attribute should have next fields:
-    # 
+    #
     # * <b>id</b> - CSS selector of HTML element
     # * <b>attr</b> - attribute name
-    # 
+    #
     # Possible additional fields are:
-    # 
+    #
     # * <b>type</b> - '_f_' for Float or '_i_' for Integer
     # * <b>proc</b> - <b>_Proc_</b> object to be executed over result
     #
@@ -48,13 +48,13 @@ module Encounter
       ]
     end
 
-    # Return object ID from URL. Supported objects are 
+    # Return object ID from URL. Supported objects are
     # {Encounter::Player}, {Encounter::Game} and {Encounter::Team}
     def parse_url_id(url)
       url.match(/[gtu]id=(\d+)/).captures.first.to_i
     end
 
-    # Return Encounter object from URL. Supported objects are 
+    # Return Encounter object from URL. Supported objects are
     # {Encounter::Player}and {Encounter::Team}
     #
     # @param url [String]
@@ -89,13 +89,13 @@ module Encounter
   # @private
   # Module holding conversions for parsed strings to numeric types
   module ParserConvertors
-    # @param v [String] 
+    # @param v [String]
     # @return [Float] Result of conversion
     def to_f(v)
       v.tr(',', '.').gsub(/[^0-9\.]/, '').to_f
     end
 
-    # @param v [String] 
+    # @param v [String]
     # @return [Integer] Result of conversion
     def to_i(v)
       v.gsub(/\D/, '').to_i
