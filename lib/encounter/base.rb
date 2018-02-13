@@ -82,6 +82,9 @@ module Encounter
 
     private
 
+    # Assign values from hash to object attributes.
+    #
+    # @param hash [Hash]
     def assign_values(hash)
       raise ArgumentError, 'Parameter must be hash.' unless hash.is_a? Hash
 

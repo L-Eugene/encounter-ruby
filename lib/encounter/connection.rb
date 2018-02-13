@@ -65,10 +65,14 @@ module Encounter
       end
     end
 
+    # Check if domain exist
+    #
+    # @return [Boolean]
     def domain_exist?
       !@conn.get('/').body.include? 'Domain name is unregistered!'
     end
 
+    # Authorize on domain
     def authorize
       res = @conn.post do |req|
         req.url '/login/signin?json=1'

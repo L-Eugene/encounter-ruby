@@ -43,7 +43,7 @@ module Encounter
 
     private
 
-    CALENDAR_URL = '/GameCalendar.aspx'.freeze
+    # Default value for {.load_announces} parameter.
     DEFAULT_FILTER = { status: 'Coming', zone: 'Real' }.freeze
 
     attr_accessor :html_page
@@ -52,19 +52,25 @@ module Encounter
     define_parser_list :parse_domain, :parse_date, :parse_name, :parse_gid,
                        :parse_authors, :parse_money
 
-    # Return Game objects, filled with data from HTML
+    # Collect Game objects from HTML page
+    # 
+    # @return [Array<Encounter::Game>] list of games from given page.
     def parse_calendar_page
-      result = []
-      dom_page.css('table.tabCalContainer tr.infoRow').each do |tr|
-        result << Encounter::Game.new(@conn, parse_all(tr))
+      dom_page.css('table.tabCalContainer tr.infoRow').map do |tr|
+        Encounter::Game.new(@conn, parse_all(tr))
       end
-      result
     end
 
+    # Get game domain name
+    #
+    # @return [Hash] with _domain_ key.
     def parse_domain(tr)
       { domain: tr.css('td:eq(4) a').first['href'] }
     end
 
+    # Get game date
+    #
+    # @return [Hash] with _start_time_ key.
     def parse_date(tr)
       {
         start_time: tr.css('td:eq(5)').first
@@ -74,14 +80,23 @@ module Encounter
       }
     end
 
+    # Get game name
+    #
+    # @return [Hash] with _name_ key.
     def parse_name(tr)
       { name: tr.css('td:eq(6) a:eq(1)').text }
     end
 
+    # Get game id
+    #
+    # @return [Hash] with _gid_ key.
     def parse_gid(tr)
       { gid: parse_url_id(tr.css('td:eq(6) a').first['href']) }
     end
 
+    # Get game id
+    #
+    # @return [Hash] with _gid_ key.
     def parse_authors(tr)
       {
         authors: tr.css('td:eq(7)').first.css('a').map do |a|
@@ -94,17 +109,20 @@ module Encounter
       }
     end
 
+    # Get game price
+    #
+    # @return [Hash] with _money_ key.
     def parse_money(tr)
       { money: tr.css('td:eq(8) a').text }
     end
 
     # Return number of pages from HTML
     def parse_page_count
-      dom_page.css('.tabCalContainer table')[3].css('a').size + 1
+      dom_page.css('.tabCalContainer table:eq(3) a').size + 1
     end
 
     def load_page(filters)
-      self.html_page = @conn.page_get(CALENDAR_URL, filters)
+      self.html_page = @conn.page_get('/GameCalendar.aspx', filters)
       @dom_page = Nokogiri::HTML(html_page)
     end
   end
