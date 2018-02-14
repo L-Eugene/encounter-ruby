@@ -30,6 +30,15 @@ class FakeTestEnCx < Sinatra::Base
     File.open(fn)
   end
 
+  get '/ALoader/Geography.aspx' do
+    if request.params['c']
+      fn = "#{DIR}/ALoader/test.en.cx_geography_c_#{request.params['c']}.txt"
+    elsif request.params['p']
+      fn = "#{DIR}/ALoader/test.en.cx_geography_p_#{request.params['p']}.txt"
+    end
+    File.open(fn)
+  end
+
   post '/login/signin' do
     content_type :json
 
