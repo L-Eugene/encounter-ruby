@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'csv'
 require 'encounter/parser'
 require 'encounter/game'
 
@@ -41,10 +42,18 @@ module Encounter
       res
     end
 
+    def load_regions
+      return @regions if @regions
+      load_page DEFAULT_FILTER unless dom_page
+      @regions = parse_countries
+    end
+
     private
 
     # Default value for {.load_announces} parameter.
     DEFAULT_FILTER = { status: 'Coming', zone: 'Real' }.freeze
+    CALENDAR_URL = '/GameCalendar.aspx'.freeze
+    GEOGRAPHY_URL = '/ALoader/Geography.aspx'.freeze
 
     attr_accessor :html_page
     attr_reader   :dom_page
@@ -117,8 +126,36 @@ module Encounter
       dom_page.css('.tabCalContainer table:eq(3) a').size + 1
     end
 
+    def parse_countries
+      dom_page.css('#ddlCountry option:gt(1)').map do |x|
+        parse_id_name([x['value'], x.text]).merge(
+          regions: parse_regions(x['value'])
+        )
+      end
+    end
+
+    def parse_regions(cid)
+      @conn.page_get(GEOGRAPHY_URL, c: cid, wse: 1).each_line.map do |r|
+        r = r.split(';')
+        next unless r.size == 2 && r.first =~ /\d+/
+        parse_id_name(r).merge(cities: parse_cities(r.first))
+      end.compact
+    end
+
+    def parse_cities(rid)
+      @conn.page_get(GEOGRAPHY_URL, p: rid, wse: 1).each_line.map do |r|
+        r = r.split(';')
+        next unless r.size == 2 && r.first =~ /\d+/
+        parse_id_name(r) if r.first.to_i > 0
+      end.compact
+    end
+
+    def parse_id_name(r)
+      { id: r.first.to_i, name: r.last.strip }
+    end
+
     def load_page(filters)
-      self.html_page = @conn.page_get('/GameCalendar.aspx', filters)
+      @html_page = @conn.page_get(CALENDAR_URL, filters)
       @dom_page = Nokogiri::HTML(html_page)
     end
   end

@@ -1,0 +1,4 @@
+100102;	Government controlled area
+100103;	Turkish controlled area
+
+
