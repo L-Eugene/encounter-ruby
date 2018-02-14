@@ -1,0 +1,33 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="http://world.en.cx/css/release/mainstyles.css?ver=1.43.2.1" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <title>Encounter</title>
+
+<style type="text/css">
+div#Splash {
+	position: absolute;
+      left: 50%;
+      top: 45%;
+      width: 100%;
+      height: 180px;
+      margin-left: -50%; /* half of width */
+      margin-top: -90px;  /* half of height */
+}
+</style>
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body class="bg_main">
+<div id="Splash">
+<center>
+Ваши запросы классифицированы как запросы робота. Подождите 30 минут или <a ID="loginRu" href="/Login.aspx?return=/ALoader/Geography.aspx?p=100288&wse=1">войдите</a> в систему, чтобы подтвердить, что вы не робот.
+<br /><br />
+Your requests have been classified as robot's requests. Please, wait 30 minutes or <a ID="loginEn" href="/Login.aspx?return=/ALoader/Geography.aspx?p=100288&wse=1">login</a> to confirm you are not a robot.
+</center>
+</div>
+</body>
+</html>
