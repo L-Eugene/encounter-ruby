@@ -8,6 +8,8 @@ module Encounter
   #
   # @todo Allow UserAgent name override
   class Connection
+    attr_reader :domain
+
     # @param [Hash] options ({})
     # @option options [String] :username Nickname or user id
     # @option options [String] :password
@@ -30,6 +32,7 @@ module Encounter
       @options = options
       @conn = new_faraday_connection
       raise 'No such domain' unless domain_exist?
+      @domain = options[:domain]
       authorize unless options[:username].nil? || options[:password].nil?
     end
 
