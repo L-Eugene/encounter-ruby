@@ -1,5 +1,4 @@
 require 'nokogiri'
-require 'csv'
 require 'encounter/parser'
 require 'encounter/game'
 
