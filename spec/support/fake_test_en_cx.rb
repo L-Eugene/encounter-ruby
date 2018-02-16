@@ -20,7 +20,7 @@ class FakeTestEnCx < Sinatra::Base
 
   get '/Games.aspx' do
     content_type 'text/html'
-    fn =  "#{DIR}/test.en.cx_games_p_#{request.params['page'] || 1}.txt"
+    fn = "#{DIR}/test.en.cx_games_p_#{request.params['page'] || 1}.txt"
     File.open(fn)
   end
 
@@ -46,7 +46,7 @@ class FakeTestEnCx < Sinatra::Base
     content_type 'text/html'
     fn = "#{DIR}/test.en.cx_teamlist_p_#{request.params['page'] || 1}.txt"
     File.open(fn)
-  end  
+  end
 
   get '/ALoader/Geography.aspx' do
     if request.params['c']

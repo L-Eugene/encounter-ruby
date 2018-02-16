@@ -40,7 +40,7 @@ module Encounter
     #
     # @param [String] url
     # @param [Hash] params
-    def page_get(url, params)
+    def page_get(url, params = {})
       @conn.get(url, params).body
     end
 

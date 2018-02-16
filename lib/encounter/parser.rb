@@ -60,16 +60,21 @@ module Encounter
     # @param url [String]
     # @return [Encounter::Player] if giver URL links to player
     # @return [Encounter::Team] if giver URL links to team
-    def parse_url_object(url)
-      c = url['href'].match(/([gtu])id=(\d+)/).captures
+    def parse_url_object(obj)
+      c = obj['href'].match(/([gtu])id=(\d+)/).captures
       case c.first
       when 't'
-        Encounter::Team.new(@conn, tid: c.last.to_i, name: url.text)
+        Encounter::Team.new(@conn, tid: c.last.to_i, name: obj.text)
       when 'u'
-        Encounter::Player.new(@conn, uid: c.last.to_i, name: url.text)
+        Encounter::Player.new(@conn, uid: c.last.to_i, name: obj.text)
       else
         raise 'Unsupported link type'
       end
+    end
+
+    def parse_max_page(obj, prefix)
+      obj.css('a').select { |a| a['href'] =~ /#{prefix}\?page=\d+$/ }
+         .map { |a| a['href'].match(/page=(\d+)$/).captures.first.to_i }.max
     end
   end
 
