@@ -4,28 +4,41 @@ module Encounter
     include HTMLParser
 
     # @param [Encounter::Connection] conn
-    # @param [String] domain Taken from connection if not given
-    # @return [Encounter::Calendar] New object
+    # @param [String] domain Taken from connection if not given.
+    #
+    # @return [Encounter::Domain] New object
     # @raise [ArgumentError] Raised if connection is not given
     def initialize(conn, domain = nil)
       @domain = domain || conn.domain
       @conn = conn
     end
 
+    # Returns coming games list from domain
+    #
+    # @return [Array<Encounter::Game>]
     def announces
       Nokogiri::HTML(@conn.page_get("http://#{@domain}/"))
               .css('#boxCenterComingGames #lnkGameTitle')
               .map { |a| parse_game(a) }
     end
 
+    # Returns domain player list
+    #
+    # @return [Array<Encounter::Player>]
     def players
       parse_domain_top '/UserList.aspx', 'lnkUserInfo'
     end
 
+    # Returns domain team list
+    #
+    # @return [Array<Encounter::Team>]
     def teams
       parse_domain_top '/Teams/TeamList.aspx', 'lnkTeamInfo'
     end
 
+    # Returns past game list from domain
+    #
+    # @return [Array<Encounter::Game>]
     def archive
       dom = Nokogiri::HTML(@conn.page_get("http://#{@domain}/Games.aspx"))
       max = parse_max_page(dom.css('#tdContentCenter').first, 'Games.aspx')
@@ -35,6 +48,9 @@ module Encounter
       end
     end
 
+    # Return domain rating. It is integer number between 0 and 7.
+    #
+    # @return [Integer]
     def stars
       Nokogiri::HTML(@conn.page_get("http://#{@domain}/")).css('#tdLogo img')
               .first['src'].match(/en_logo(\d)s/).captures.first.to_i
