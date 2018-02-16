@@ -3,19 +3,23 @@ module Encounter
   class Domain
     include HTMLParser
 
+    # @param [Encounter::Connection] conn
+    # @param [String] domain Taken from connection if not given
+    # @return [Encounter::Calendar] New object
+    # @raise [ArgumentError] Raised if connection is not given
     def initialize(conn, domain = nil)
       @domain = domain || conn.domain
       @conn = conn
     end
 
     def announces
-      Nokogiri::HTML(@conn.page_get('/'))
+      Nokogiri::HTML(@conn.page_get("http://#{@domain}/"))
               .css('#boxCenterComingGames #lnkGameTitle')
               .map { |a| parse_game(a) }
     end
 
     def players
-      parse_domain_top 'UserList.aspx', 'lnkUserInfo'
+      parse_domain_top '/UserList.aspx', 'lnkUserInfo'
     end
 
     def teams
@@ -23,7 +27,7 @@ module Encounter
     end
 
     def archive
-      dom = Nokogiri::HTML(@conn.page_get('/Games.aspx'))
+      dom = Nokogiri::HTML(@conn.page_get("http://#{@domain}/Games.aspx"))
       max = parse_max_page(dom.css('#tdContentCenter').first, 'Games.aspx')
       1.upto(max).flat_map do |page|
         Nokogiri::HTML(@conn.page_get('/Games.aspx', page: page))
@@ -32,8 +36,8 @@ module Encounter
     end
 
     def stars
-      Nokogiri::HTML(@conn.page_get('/')).css('#tdLogo img').first['src']
-              .match(/en_logo(\d)s/).captures.first.to_i
+      Nokogiri::HTML(@conn.page_get("http://#{@domain}/")).css('#tdLogo img')
+              .first['src'].match(/en_logo(\d)s/).captures.first.to_i
     end
 
     private
@@ -48,13 +52,13 @@ module Encounter
     end
 
     def parse_domain_top(url, id_mask)
-      dom = Nokogiri::HTML(@conn.page_get(url))
+      dom = Nokogiri::HTML(@conn.page_get("http://#{@domain}#{url}"))
       max = parse_max_page(dom.css('#tdContentCenter').first, url)
       1.upto(max).flat_map { |page| parse_domain_top_page(url, id_mask, page) }
     end
 
     def parse_domain_top_page(url, id_mask, page)
-      Nokogiri::HTML(@conn.page_get(url, page: page))
+      Nokogiri::HTML(@conn.page_get("http://#{@domain}#{url}", page: page))
               .css('#tdContentCenter a')
               .select { |a| a['id'] =~ /#{id_mask}$/ }
               .map { |a| parse_url_object(a) }
