@@ -1,7 +1,3 @@
-require 'faraday'
-require 'faraday-cookie_jar'
-require 'json'
-
 # Module for all gem classes
 module Encounter
   # Connection class

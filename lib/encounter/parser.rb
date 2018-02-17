@@ -73,8 +73,24 @@ module Encounter
     end
 
     def parse_max_page(obj, prefix)
-      obj.css('a').select { |a| a['href'] =~ /#{prefix}\?page=\d+$/ }
+      obj.css('a').select { |a| a['href'] =~ /#{prefix}.*page=\d+$/ }
          .map { |a| a['href'].match(/page=(\d+)$/).captures.first.to_i }.max
+    end
+
+    def parse_id_name(pair)
+      { id: pair.first.to_i, name: pair.last.strip }
+    end
+
+    def parse_cvs_pair(url, params, proc)
+      @conn.page_get(url, params).each_line.map do |r|
+        r = r.split(';')
+        next unless r.size == 2 && r.first =~ /\d+/
+        proc.call(r)
+      end.compact
+    end
+
+    def load_page(url, params = {})
+      Nokogiri::HTML(@conn.page_get(url, params))
     end
   end
 

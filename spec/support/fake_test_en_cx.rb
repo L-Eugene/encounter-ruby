@@ -5,8 +5,8 @@ class FakeTestEnCx < Sinatra::Base
 
   get '/GameCalendar.aspx' do
     content_type 'text/html'
-    status = request.params['status'].downcase
-    zone = request.params['zone'].downcase
+    status = (request.params['status'] || 'Coming').downcase
+    zone = (request.params['zone'] || 'Real').downcase
     page = request.params['page'] || 1
     fn = "#{DIR}/test.en.cx_calendar_#{status}_#{zone}_p#{page}.txt"
     File.open(fn)
