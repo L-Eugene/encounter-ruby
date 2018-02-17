@@ -5,8 +5,8 @@ class FakeTestEnCx < Sinatra::Base
 
   get '/GameCalendar.aspx' do
     content_type 'text/html'
-    status = request.params['status'].downcase
-    zone = request.params['zone'].downcase
+    status = (request.params['status'] || 'Coming').downcase
+    zone = (request.params['zone'] || 'Real').downcase
     page = request.params['page'] || 1
     fn = "#{DIR}/test.en.cx_calendar_#{status}_#{zone}_p#{page}.txt"
     File.open(fn)
@@ -18,15 +18,33 @@ class FakeTestEnCx < Sinatra::Base
     File.open(fn)
   end
 
+  get '/Games.aspx' do
+    content_type 'text/html'
+    fn = "#{DIR}/test.en.cx_games_p_#{request.params['page'] || 1}.txt"
+    File.open(fn)
+  end
+
   get '/UserDetails.aspx' do
     content_type 'text/html'
     fn = "#{DIR}/test.en.cx_player_#{request.params['uid']}.txt"
     File.open(fn)
   end
 
+  get '/UserList.aspx' do
+    content_type 'text/html'
+    fn = "#{DIR}/test.en.cx_userlist_p_#{request.params['page'] || 1}.txt"
+    File.open(fn)
+  end
+
   get '/Teams/TeamDetails.aspx' do
     content_type 'text/html'
     fn = "#{DIR}/test.en.cx_team_#{request.params['tid']}.txt"
+    File.open(fn)
+  end
+
+  get '/Teams/TeamList.aspx' do
+    content_type 'text/html'
+    fn = "#{DIR}/test.en.cx_teamlist_p_#{request.params['page'] || 1}.txt"
     File.open(fn)
   end
 

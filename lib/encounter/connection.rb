@@ -1,13 +1,11 @@
-require 'faraday'
-require 'faraday-cookie_jar'
-require 'json'
-
 # Module for all gem classes
 module Encounter
   # Connection class
   #
   # @todo Allow UserAgent name override
   class Connection
+    attr_reader :domain
+
     # @param [Hash] options ({})
     # @option options [String] :username Nickname or user id
     # @option options [String] :password
@@ -30,6 +28,7 @@ module Encounter
       @options = options
       @conn = new_faraday_connection
       raise 'No such domain' unless domain_exist?
+      @domain = options[:domain]
       authorize unless options[:username].nil? || options[:password].nil?
     end
 
@@ -37,7 +36,7 @@ module Encounter
     #
     # @param [String] url
     # @param [Hash] params
-    def page_get(url, params)
+    def page_get(url, params = {})
       @conn.get(url, params).body
     end
 

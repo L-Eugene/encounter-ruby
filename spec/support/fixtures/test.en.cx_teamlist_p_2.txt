@@ -1,0 +1,977 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Список команд</title>
+	<link href="http://world.en.cx/css/release/mainstyles.css?ver=1.43.2.1" type="text/css" rel="stylesheet" media="screen,projection" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://world.en.cx/js/release/consCommon.js?ver=1.43.2.1" type="text/javascript"></script>
+<script src="http://world.en.cx/js/release/consUi.js?ver=1.43.2.1" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>
+<style type="text/css" media="screen,projection">.enPnl1.clr0{background-color:#031700 !important;border-color: !important;} </style>
+<style type="text/css" media="screen,projection">.enPnl1.clr1{background-color:#031700 !important;border-color:#1A7600 !important;} </style>
+<style type="text/css" media="screen,projection">.enPnl1.clr2{background-color:#000000 !important;border-color:#00AC04 !important;} </style>
+
+	
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://cdn.endata.cx/images/favicon.ico"></link>
+
+
+<script type="text/javascript">
+window.AjaxHelper = new AjaxHelperClass('Загрузка...');
+window.DataDomain = 'http://cdn.endata.cx';
+window.locale = 'ru';
+</script>
+	<meta name="copyright" content="Copyright  2004-2011 Encounter Ltd. All rights reserved." />
+	<meta name="robots" content="follow" />
+	<meta name="description" content="Encounter сеть городских игр — приключенческие, творческие, интеллектуальные игры, которые проводятся в реальном мире, на улицах городов более чем в 20 странах мира — квест, cхватка, фотоигра, мозговой штурм, викторина., Список команд"></meta>
+	
+
+
+<link rel="alternate" type="application/rss+xml" title="Публикации" href="http://remix.en.cx/export/Syndication/PublicationsRss.aspx?lang=ru" />
+
+<link rel="alternate" type="application/rss+xml" title="ФОРУМ Encounter, remix.en.cx" href="http://remix.en.cx/export/Syndication/ForumRss.aspx?lang=ru" />
+
+<link rel="alternate" type="text/calendar" title="{Coming Games Calendar}" href="http://remix.en.cx/export/Syndication/GamesICal.aspx" />
+	<meta name="keywords" content="квест, схватка, городская игра, encounter, en, энка, энкаунтер, схватка, фотокросс, фотоохота, геокешинг, корпоративная игра, викторина, мозговой штурм, Список команд"></meta>
+
+	<script language="javascript" type="text/javascript">
+		//<![CDATA[
+		$(document).ready(function() {
+			var title = $('head > title');
+			var titleText = title.text();
+			if (titleText.indexOf(document.domain) < 0) {
+				try { title.text(document.domain + ' // ' + titleText); }
+				catch (err) { }
+			}
+		});
+		//]]>
+	</script>
+	
+
+<script type="text/javascript">
+//<![CDATA[
+	var _gaq = _gaq || [];
+
+
+try
+{
+	_gaq.push(['t0._setAccount', 'UA-1064087-1']);
+	_gaq.push(['t0._trackPageview']);
+	_gaq.push(['t0._trackPageLoadTime']);
+}
+catch(err) {}
+
+//]]>
+</script>
+</head>
+<body>
+	
+	<div ID="DefaultDialogSkin" style="display:none;">
+	<div class="enPnl1 border_rad3 clr2">
+		<div ID="dlgContentArea" style="overflow:auto;padding:10px;">
+		</div>
+		<div style="text-align: center; padding: 10px;" width="100%" class="dlgButtons">
+			<input type="image" src="http://cdn.endata.cx/data/buttons/common/ok.gif" onclick="return false;" alt="OK" width="26" height="20" border="0" class="hidden" name="dlgBtnOK" title="OK" />  
+			<input type="image" src="http://cdn.endata.cx/data/buttons/cancel_ru.gif" onclick="return false;" alt="Отмена" height="20" title="Отмена" border="0" class="hidden" name="dlgBtnCancel" />  
+			<input type="image" src="http://cdn.endata.cx/data/buttons/yes_ru.gif" onclick="return false;" alt="Да" height="20" title="Да" border="0" class="hidden" name="dlgBtnYes" />  
+			<input type="image" src="http://cdn.endata.cx/data/buttons/no_ru.gif" onclick="return false;" alt="Нет" height="20" title="Нет" border="0" class="hidden" name="dlgBtnNo" />  
+			<div class="hidden" id="dlgLnkClose">
+				[<a ID="lnkClose" name="lnkClose" href="javascript:void(0);">Закрыть</a>]
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">//<![CDATA[
+
+ var i2054633861 = new EnDialogBox({"skin":"DefaultDialogSkin","width":666,"height":380,"title":"Помощь","btnHidden":"hddni2054633861","buttons":["dlgBtnOK"]});
+//]]></script>
+	
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" id="tableHeader">
+			
+				<tr>
+					<td id="tdLogo">
+						<a href="/" title="Encounter - международная сеть активных городских игр">
+							<img border="0" src="http://cdn.endata.cx/images/logos/en_logo0s.png" width="205" height="65" title="Encounter - международная сеть активных городских игр" alt="Encounter - международная сеть активных городских игр" />
+							
+						</a>
+					</td>
+					<td width="100%" valign="middle" align="right" id="tdLogoRight">
+						
+						<div id="DivTopDesign">
+							<p><link rel="stylesheet" type="text/css" href="http://d1.endata.cx/images/personal/195011/custom.css" /></p>
+<p><meta name="cypr-verification" content="df95e25c62d331d7ee667b7f2920e84f" /></p>
+<script type="text/javascript">// <![CDATA[
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+
+if ((version >= 5.5) && (document.body.filters)) 
+{
+   for(var i=0; i<document.images.length; i++)
+   {
+      var img = document.images[i]
+      var imgName = img.src.toUpperCase()
+      if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+      {
+         var imgID = (img.id) ? "id='" + img.id + "' " : ""
+         var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+         var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+         var imgStyle = "display:inline-block;" + img.style.cssText 
+         if (img.align == "left") imgStyle = "float:left;" + imgStyle
+         if (img.align == "right") imgStyle = "float:right;" + imgStyle
+         if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+         var strNewHTML = "<span " + imgID + imgClass + imgTitle
+         + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+         + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+         + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+         img.outerHTML = strNewHTML
+         i = i-1
+      }
+   }
+}
+
+
+
+$("#DivTopDesign").css("background-position","center right");
+$("#DivTopDesign").css("background-repeat","no-repeat");
+$("#DivTopDesign").css("background-image","url(http://remix.en.cx/images/personal/99848/nespim1.jpg)");
+$("#DivTopDesign").css("height", "100px");
+// ]]></script>
+<!--<mce:script language="javascript"><! 
+function getCookie(name) {
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+                return null
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie("Sossik")!="read") {document.cookie = "Sossik=read";document.location.href="http://www1.gd.by/cx/chess.nsf/dima?OpenForm"}
+// -->
+<p>&#160;</p>
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center"><a href="http://www.remix.en.cx"><img src="http://cdn.endata.cx/images/personal/99848/iin.png" alt="IIN" border="0" /></a>
+
+
+<!--<a style="font-size:20px;" _mce_style="font-size: 20px;" href="http://borisovcity.en.cx/Addons.aspx?aid=6034" _mce_href="http://borisovcity.en.cx/Addons.aspx?
+
+aid=6034" target="_blank">ДЕТЯМ НУЖНА НАША ПОМОЩЬ!</a>-->
+
+<!--<p style="font-size:20px;" _mce_style="font-size: 20px;">С новым годом!</p>--></td>
+<td align="center" width="205px"><img src="http://cdn.endata.cx/images/personal/99848/nespim2.jpg" alt="" /></td>
+</tr>
+</tbody>
+</table>
+<!--<mce:script language="javascript"><! 
+document.getElementById("_ctl15_imgLogo").src="http://cdn.endata.cx/images/personal/99848/en_logo.gif"
+// -->
+<script type="text/javascript">// <![CDATA[
+for (i=0; i<50; i++) {if (!(document.getElementById("_ctl"+i+"_imgLogo") == null)) {document.getElementById("_ctl"+i
+
++"_imgLogo").src="http://cdn.endata.cx/images/personal/99848/en_logo.gif"}}
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+for (i=0; i<50; i++) {if (!(document.getElementById("_ctl"+i+"_trAdTop") == null)) {var t = document.getElementById("_ctl"+i+"_trAdTop"); t.parentNode.removeChild
+
+(t);}}
+// ]]></script>
+<p>&#160;</p>							
+						</div>						
+					</td>
+				</tr>
+			
+		</table>
+		
+	
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" class="menuWrap">
+			<tr>
+				<td style="width: 140px">
+					<a class="wapLink" ID="enhlMobileVersionLink" href="//m.remix.en.cx/">Мобильная версия</a>					
+				</td>
+				<td align="center">
+					
+
+
+
+
+
+<script type="text/javascript">
+	//<![CDATA[	
+    if (typeof (window.enMenu) == 'undefined') {
+        window.enMenu = new EnMenu();
+        jQuery(function() { enMenu.init(); });
+       }
+       //]]>
+</script>
+
+<ul class="menu" style="display:none;">
+<li class="default"><div class="wr"><a href="/Default.aspx" title="Главная"><span><img src="http://cdn.endata.cx/images/icons/mainmenu/left1.gif" alt="&lt;&lt;" title="Главная" />&nbsp;&nbsp;</span></a></div></li>
+
+<li><div class="rootBG">&nbsp;</div><div class="wr"><a href="/SiteMap.aspx?mnid=Games" class=" root sf-with-ul"><span>Игры</span><span class="subArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt="&gt;&gt;" title="&gt;&gt;" />&nbsp;&nbsp;</span></a></div><ul><li><a href="/Games.aspx" class="bold">Прошедшие игры домена</a></li><li><a href="/GameCalendar.aspx" class="bold" target="_blank">Календарь игр</a></li><li><a class="game zone_0 sf-with-ul">Схватка<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=336">Описание</a></li><li><a href="/Addons.aspx?aid=1224">Глобальные правила</a></li><li><a href="/Addons.aspx?aid=6426">Локальные правила</a></li></ul></li><li><a class="game zone_7 sf-with-ul">Точки<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=6915">Описание</a></li><li><a href="/Addons.aspx?aid=2598">Глобальные правила</a></li></ul></li><li><a class="game zone_1 sf-with-ul">Мозговой штурм<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=342">Описание</a></li><li><a href="/Addons.aspx?aid=1226">Глобальные правила</a></li></ul></li><li><a class="game zone_9 sf-with-ul">Викторина<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=6957">Описание</a></li><li><a href="/Addons.aspx?aid=8006">Глобальные правила</a></li></ul></li><li><a class="game zone_5 sf-with-ul">Фотоохота<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=337">Описание</a></li><li><a href="/Addons.aspx?aid=1227">Глобальные правила</a></li></ul></li><li><a class="game zone_2 sf-with-ul">Фотоэкстрим<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=340">Описание</a></li><li><a href="/Addons.aspx?aid=1230">Глобальные правила</a></li></ul></li><li><a class="game zone_4 sf-with-ul">Кэшинг<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=341">Описание</a></li><li><a href="/Addons.aspx?aid=1231">Глобальные правила</a></li></ul></li><li><a class="game zone_3 sf-with-ul">Мокрые войны<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=338">Описание</a></li><li><a href="/Addons.aspx?aid=1229">Глобальные правила</a></li></ul></li><li><a class="game zone_8 sf-with-ul">Конкурс<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Addons.aspx?aid=6916">Описание</a></li><li><a href="/Addons.aspx?aid=4042">Глобальные правила</a></li></ul></li></ul></li>
+
+<li><div class="rootBG">&nbsp;</div><div class="wr"><a href="/SiteMap.aspx?mnid=network" class=" root sf-with-ul"><span>Cеть</span><span class="subArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt="&gt;&gt;" title="&gt;&gt;" />&nbsp;&nbsp;</span></a></div><ul><li><a href="/Manifest.aspx" class="bold dark_gold">Генеральная Декларация</a></li><li><a class="bold sf-with-ul">Новобранцам<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/SignUp.aspx" class="bold">Регистрация в сети</a></li><li><a href="/Instruction.aspx">Инструкция</a></li><li><a href="/Addons.aspx?aid=13090">Аттестация</a></li></ul></li><li><a class="bold sf-with-ul">Публикации<div class="rSubArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt=">" title=">" />&nbsp;&nbsp;&nbsp;</div></a><ul><li><a href="/Publications/Default.aspx" class="bold">Все публикации</a></li><li><a href="/Guestbook/Messages.aspx?topic=30354">Рейтинг доменов</a></li><li><a href="/Guestbook/Messages.aspx?topic=42751">Бонусная таблица</a></li><li><a href="/Guestbook/Messages.aspx?topic=9479">Аттестация</a></li><li><a href="/Guestbook/Messages.aspx?topic=72457">Реферальная программа</a></li></ul></li><li><a href="/Geography.aspx" class="bold" target="_blank">География</a></li><li><a href="/Ordens.aspx" class="bold">Ордена</a></li><li><a href="/Faq.aspx" class="bold">Вопросы и ответы</a></li><li><a href="/UserList.aspx">Список участников</a></li><li><a href="/Teams/TeamList.aspx">Список команд</a></li><li><a href="/PlayerSearch.aspx" onclick="OpenSearchWindow();return false;" target="_blank">Поиск</a></li><li><a href="/Statistics.aspx">Статистика</a></li><li><a href="/BecomeGamesCreator.aspx" class="bold aqua">Стать автором игр</a></li></ul></li>
+
+<li><div class="rootBG">&nbsp;</div><div class="wr"><a href="/SiteMap.aspx?mnid=Media" class=" root sf-with-ul"><span>Медиа</span><span class="subArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt="&gt;&gt;" title="&gt;&gt;" />&nbsp;&nbsp;</span></a></div><ul><li><a href="/Addons.aspx?aid=6022" class="bold">Фильмы</a></li><li><a href="/PhotoGalleriesAll.aspx" class="bold">Фотогалереи</a></li><li><a href="/Addons.aspx?aid=6023" class="bold">Музыкальные клипы</a></li><li><a href="/Addons.aspx?aid=170" class="bold">Музыка и песни</a></li><li><a href="/Addons.aspx?aid=173" class="bold">Литература</a></li><li><a href="/Addons.aspx?aid=167">Логотип и стиль</a></li><li><a href="/Addons.aspx?aid=6531">Flash-баннеры</a></li><li><a href="/Addons.aspx?aid=168">Десктопы</a></li><li><a href="/Addons.aspx?aid=171">Полиграфия</a></li><li><a href="/Addons.aspx?aid=172">Темы</a></li></ul></li>
+
+<li><div class="rootBG">&nbsp;</div><div class="wr"><a href="/SiteMap.aspx?mnid=Contacts" class=" root sf-with-ul"><span>Связь</span><span class="subArrow"><img src="http://cdn.endata.cx/images/empty.gif" alt="&gt;&gt;" title="&gt;&gt;" />&nbsp;&nbsp;</span></a></div><ul><li><a href="/DomainAdministration.aspx" class="bold">C Aдминистрацией домена</a></li><li><a href="/Addons.aspx?aid=6056">С Техподдержкой сети</a></li><li><a href="/Addons.aspx?aid=6122">C инопланетянами</a></li><li><a href="http://messenger.providesupport.com/messenger/encounter.html" onclick="return OnlineHelpOnClick();" target="_blank">Глобальная живая помощь</a></li></ul></li>
+
+<li><div class="rootBG">&nbsp;</div><div class="wr"><a href="/Guestbook.aspx" class="bold root"><span>Форум</span></a></div></li>
+<li class="vline"><a>&nbsp;</a></li></ul>
+				</td>
+				<td style="width: 140px">
+					&nbsp;
+				</td>
+			</tr>
+		</table>
+	
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" id="tableContent">
+		<tr id="contentRow">
+			<td>
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td valign="top" class="leftPnl leftMenu" id="tdContentLeft">
+                            <div id="boxUser">
+							    <div style="width:100%;"><div class="enPnl1 border_rad5  pnGr" style="padding:5px;"> 
+	<table cellspacing="0" cellpadding="0" class="tdWidth100p w100per noborder">
+		<tr>			
+			<td height="20" align="center"><a id="ctl02_ctl04_ctl00_lnkLogin" class="gold19" href="/Login.aspx?return=%2fTeams%2fTeamList.aspx%3fpage%3d2">Вход на сайт</a></td>			
+		</tr>
+		<tr>			
+			<td height="35" class="bold" align="center"><a href="/SignUp.aspx">Регистрация</a>&nbsp;<span>или</span><br/>
+			<a class="Text5 normal" href="/ForgotPassword.aspx">восстановление пароля</a></td>
+		</tr>
+	</table>
+</div></div>
+
+
+
+
+                            </div>
+									 
+									
+
+<script type="text/javascript">
+
+	function onYouTubePlayerReady() {
+		ytplayer.playVideo();
+	}
+
+	$(function () {
+
+		$("#boxMovie a").click(function (e) {
+			e.preventDefault();
+			$("#viewENmovie").prependTo("body").show().find(".shade, i").fadeTo(600, .8, function () { $(this).siblings("#ytplayer").css("display", "block"); }).mouseover(function () { $(this).siblings("i").addClass("hovered"); }).mouseout(function () { $(this).siblings("i").removeClass("hovered"); });
+
+		}),
+		$("#viewENmovie .close, #viewENmovie .shade").click(function () {
+			$(this).hide().parent().hide();
+		});
+	});
+</script>
+
+
+
+<div id="boxMovie">
+
+	<div class="enPnl1 border_rad5 pnGr leftPnlItem">
+		<a href="http://youtu.be/kG8YFgYktdA" target="_blank" title="Мультик о EN играх">
+			<img src="http://cdn.endata.cx/images/movie/movie.jpg" width="168" height="115" alt="Мультик о EN играх" title="Мультик о EN играх" />
+			Куда я попал?!?
+		</a>
+		<div id="viewENmovie">
+			<div class="shade"></div>
+			<i class="close"></i>
+
+			<div id="ytapiplayer">You need Flash player 8+ and JavaScript enabled to view this video.</div>
+			<script type="text/javascript">
+				var params = { allowScriptAccess: "always" };
+				var atts = { id: "ytplayer", allowfullscreen: "true" };
+				swfobject.embedSWF("http://www.youtube.com/e/kG8YFgYktdA?enablejsapi=1&playerapiid=ytplayer",
+						"ytapiplayer", "640", "360", "8", null, null, params, atts);
+			</script>
+		</div>
+	</div>
+</div>
+                            <div id="boxLanguage">
+							    
+                            </div>
+                            <div id="boxOnlineHelp">
+							    <div class="leftPnlItem leftPnlWidth"><!-- p><iframe id="ifrProviderSupport" class="ifrProviderSupport" style="height: 76px;" src="/ProviderSupport.html" frameborder="0" scrolling="no"></iframe></p -->
+<center><a href="http://twitter.com/EncounterGames" target="_blank"><img src="http://d1.endata.cx/images/personal/1/t.ico.png" alt="EN в Twitter" width="27" height="26" align="middle" vspace="4"></a>  <a href="http://vkontakte.ru/club971699" target="_blank"><img src="http://d1.endata.cx/images/personal/1/v.ico.png" alt="EN В Контакте" width="27" height="26" align="middle" vspace="4"></a>  <a href="http://www.facebook.com/encountergames" target="_blank"><img src="http://d1.endata.cx/images/personal/1/f.ico.png" alt="EN в Facebook" width="26" height="26" align="middle" vspace="4"></a></center>
+
+
+</div>
+                            </div>
+                            <div id="boxNews">
+							    <div><div class="enPnl1 border_rad5 clr0 leftPnlItem" style="padding:8px;">
+	<b><div class="white center">Информбюро:</div></b><br />	
+	
+			<span class="news_date">29.03.2014 9:33:29</span><br />
+			<span class="news_title"></span><br />
+			<div class="news_text"><font color="#4abecf">29 марта 2014 на домене vitebsk.en.cx проходит игра #4. Победитель игры получит сертификат на бесплатное участие в межреге "insomnia"</font></div><br /><br />
+		
+			<span class="news_date">08.02.2011 11:05:58</span><br />
+			<span class="news_title">Йо-хо-хо и бутылка рома</span><br />
+			<div class="news_text">Пиратов экипажа корабля 40Cats с Победой!!! <br/>Не менее изобретательных в поисках грабителей Delta Force и Отсаженных с Пьедесталом!<br/><br/><br/>Всех остальных участников флотилии с занятыми местами.<br/>Всем огромное спасибо за участие и отзывы! <br/><br/>С уважением, экипаж БЭТМАНиИ.</div><br /><br />
+		
+			<span class="news_date">21.11.2010 3:17:41</span><br />
+			<span class="news_title">LS2SB</span><br />
+			<div class="news_text">Поздравляем команду с нецензурным названием с победой )</div><br /><br />
+		
+			<span class="news_date">03.05.2010 11:00:10</span><br />
+			<span class="news_title">Поздравляем!</span><br />
+			<div class="news_text">Команду Explorer с первым местом, вы смогли в конце игры сохранить при более низких характеристиках аж 6 жизней, вот ключ к вашей победе.<br/>Команду Скромное обаяние буржуазии со вторым местом, вы смогли загрузить сохранение, чем увеличили количество своих жизней на 3.<br/>Команду XZ4T-9 с третьим местом, вы грамотно распорядились всем, что у вас было, что позволило уверенно отражать атаки даже более сильных соперников.</div><br /><br />
+		
+			<span class="news_date">02.05.2010 6:48:18</span><br />
+			<span class="news_title">Внимание 2</span><br />
+			<div class="news_text">Магнитная буря пошла на спад, шахты не рушатся, защита не снимается. <br/>Игра на en движке будет закрыта в сегодня в 17_00. Если до этого времени не будет выявлен победитель будет объявлена ничья и победят соответственно Ремиксы.</div><br /><br />
+		
+	<a href="/NewsArchive.aspx">Архив Новостей &gt;&gt;&gt;</a><br />	
+</div></div>
+                            </div>
+                            <div id="boxComingGames">
+							    <div class="enPnl1 border_rad5 clr1 leftPnlItem">
+	<table cellpadding="7" cellspacing="0" border="0" width="100%">
+		<tr>
+			<td class="white" align="center"><b>Предстоящие игры:</b></td>
+		</tr>
+		
+				<tr>
+					<td>
+						<div class="comingGame">
+						<b><span class="Text4yellow">(#</span><span class="Text4gold">80</span><span class="Text4yellow">)&nbsp;"</span><a href="/GameDetails.aspx?gid=59756">&quot;antiSTRESS&quot; #7</a><span class="Text4yellow">"</span></b>
+						<br/>
+						<b>командная игра,</b>
+						<br/>
+						<b>14.10.2018 / 10:00:00</b>
+						<br/>
+						Игра:&nbsp;<span class="white">Схватка</span>
+						<br/>
+						Авторы:&nbsp;<a href="/UserDetails.aspx?uid=30900">Smoggg</a>, <a href="/UserDetails.aspx?uid=99848">RUmba</a>, <a href="/UserDetails.aspx?uid=185437">Nik@</a>, <a href="/UserDetails.aspx?uid=1382595">Glyxar</a>, <a href="/UserDetails.aspx?uid=1382608">3Ler</a>, <a href="/UserDetails.aspx?uid=1382650">Eхclusive</a>, <a href="/UserDetails.aspx?uid=1413394">Истеричка</a>, <a href="/UserDetails.aspx?uid=1548784">max#</a>
+						
+						
+							<br/>						
+							Участие:&nbsp;бесплатное						
+						
+							
+						
+						
+						</div>
+					</td>
+				</tr>
+			
+	</table>
+</div>
+                            </div>
+							<div id="boxAdvert" class="leftPnlItem leftPnlWidth">
+
+
+</div>
+							
+
+<div style="margin-bottom:10px; text-align:center;">
+	<a ID="lnkAdPlacement" class="orange h9" href="/Ads.aspx">Размещение рекламы</a>
+</div>
+
+							<div class="spacer" style="height:12px; width:175px;"></div>
+						</td>
+						<td width="99%" class="center-column" valign="top" id="tdContentCenter">
+							<table cellpadding="10" border="0" width="100%">
+								<tr>
+									<td width="100%">
+										
+										<h1 class="PageTitle">Список команд</h1>
+
+<br/>
+<form name="MainForm" method="post" action="./TeamList.aspx?page=2" id="MainForm" class="noPadMarg">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY5Mzc0OTAzOWRkGuus5NdqHa7nlABCJt3VGSnuevk=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="ACC0308A" />
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td nowrap="nowrap">
+		Сортировать список по:&nbsp;
+		<b>очкам</b>&nbsp;|&nbsp;
+		<a href="/Teams/TeamList.aspx?sortfield=TeamName&page=2">названию</a>&nbsp;|&nbsp;
+		<a href="/Teams/TeamList.aspx?sortfield=MembersCount&page=2">составу</a>&nbsp;|&nbsp;
+		<a href="/Teams/TeamList.aspx?sortfield=CreateDate&page=2">дате регистрации</a>
+	</td>
+</tr>
+<tr>
+	<td colspan="2"><div class="hr" style="margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+</tr>
+</table>
+
+		<table cellpadding="0" cellspacing="0" width="100%">
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">103093</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=103093" id="TeamsRepeater_ctl01_lnkTeamInfo" target="_blank">Южные Курилы</a>&nbsp;
+				(<span class="white_bold">92,73</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl01_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=30815" id="TeamsRepeater_ctl01_lnkCaptainInfo" target="_blank" Title="Капитан">Feel_good~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">07.02.2011 / 09:32</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">19813</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=19813" id="TeamsRepeater_ctl03_lnkTeamInfo" target="_blank">Кирюхи</a>&nbsp;
+				(<span class="white_bold">79,04</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl03_lblMemberCount" Title="Количество участников в команде">10</span> / <a href="/UserDetails.aspx?uid=144873" id="TeamsRepeater_ctl03_lnkCaptainInfo" target="_blank" Title="Капитан">ZitZ</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">15.09.2009 / 21:03</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">21916</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=21916" id="TeamsRepeater_ctl05_lnkTeamInfo" target="_blank">Как Тузик грелки...</a>&nbsp;
+				(<span class="white_bold">79,02</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl05_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=126908" id="TeamsRepeater_ctl05_lnkCaptainInfo" target="_blank" Title="Капитан">Злобная панда~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">21.11.2009 / 16:45</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">19764</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=19764" id="TeamsRepeater_ctl07_lnkTeamInfo" target="_blank">не поняла удачи возьми лопату классные сиськи верни пасатижы?</a>&nbsp;
+				(<span class="white_bold">72,67</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl07_lblMemberCount" Title="Количество участников в команде">4</span> / <a href="/UserDetails.aspx?uid=157945" id="TeamsRepeater_ctl07_lnkCaptainInfo" target="_blank" Title="Капитан">капитанамана~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">14.09.2009 / 11:39</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">115076</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=115076" id="TeamsRepeater_ctl09_lnkTeamInfo" target="_blank">Бородатые крысы</a>&nbsp;
+				(<span class="white_bold">51,11</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl09_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=1370504" id="TeamsRepeater_ctl09_lnkCaptainInfo" target="_blank" Title="Капитан">Бородатая крыса</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">14.07.2011 / 22:55</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">3645</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=3645" id="TeamsRepeater_ctl11_lnkTeamInfo" target="_blank">Мяу</a>&nbsp;
+				(<span class="white_bold">34,72</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl11_lblMemberCount" Title="Количество участников в команде">6</span> / <a href="/UserDetails.aspx?uid=63244" id="TeamsRepeater_ctl11_lnkCaptainInfo" target="_blank" Title="Капитан">Мяу~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">02.07.2007 / 01:31</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">12509</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=12509" id="TeamsRepeater_ctl13_lnkTeamInfo" target="_blank">Шабаш</a>&nbsp;
+				(<span class="white_bold">32,52</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl13_lblMemberCount" Title="Количество участников в команде">5</span> / <a href="/UserDetails.aspx?uid=120151" id="TeamsRepeater_ctl13_lnkCaptainInfo" target="_blank" Title="Капитан">[шабаш]Black_Angel</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">08.12.2008 / 10:19</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">10250</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=10250" id="TeamsRepeater_ctl15_lnkTeamInfo" target="_blank">Ага! вот эти ребята</a>&nbsp;
+				(<span class="white_bold">30,36</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl15_lblMemberCount" Title="Количество участников в команде">9</span> / <a href="/UserDetails.aspx?uid=98337" id="TeamsRepeater_ctl15_lnkCaptainInfo" target="_blank" Title="Капитан">смакакрендель</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">09.09.2008 / 21:56</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">27681</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=27681" id="TeamsRepeater_ctl17_lnkTeamInfo" target="_blank">ЖАРКОБЛЯЧ</a>&nbsp;
+				(<span class="white_bold">28,21</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl17_lblMemberCount" Title="Количество участников в команде">6</span> / <a href="/UserDetails.aspx?uid=180273" id="TeamsRepeater_ctl17_lnkCaptainInfo" target="_blank" Title="Капитан">aSoль</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">13.08.2010 / 16:38</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">9896</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=9896" id="TeamsRepeater_ctl19_lnkTeamInfo" target="_blank">Неофиты</a>&nbsp;
+				(<span class="white_bold">27,57</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl19_lblMemberCount" Title="Количество участников в команде">4</span> / <a href="/UserDetails.aspx?uid=133214" id="TeamsRepeater_ctl19_lnkCaptainInfo" target="_blank" Title="Капитан">basilianius~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">25.08.2008 / 17:56</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">35269</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=35269" id="TeamsRepeater_ctl21_lnkTeamInfo" target="_blank">Mensk</a>&nbsp;
+				(<span class="white_bold">24,06</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl21_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=1421493" id="TeamsRepeater_ctl21_lnkCaptainInfo" target="_blank" Title="Капитан">mensk_bot</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">06.10.2010 / 21:09</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">9558</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=9558" id="TeamsRepeater_ctl23_lnkTeamInfo" target="_blank">DeRRi</a>&nbsp;
+				(<span class="white_bold">24</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl23_lblMemberCount" Title="Количество участников в команде">7</span> / <a href="/UserDetails.aspx?uid=91454" id="TeamsRepeater_ctl23_lnkCaptainInfo" target="_blank" Title="Капитан">NightHawk~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">06.08.2008 / 15:26</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">11238</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=11238" id="TeamsRepeater_ctl25_lnkTeamInfo" target="_blank">Рапсоход</a>&nbsp;
+				(<span class="white_bold">19,84</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl25_lblMemberCount" Title="Количество участников в команде">1</span> / <a href="/UserDetails.aspx?uid=66215" id="TeamsRepeater_ctl25_lnkCaptainInfo" target="_blank" Title="Капитан">sazami~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">18.10.2008 / 16:34</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">18487</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=18487" id="TeamsRepeater_ctl27_lnkTeamInfo" target="_blank">Неспиться</a>&nbsp;
+				(<span class="white_bold">18,47</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl27_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=81762" id="TeamsRepeater_ctl27_lnkCaptainInfo" target="_blank" Title="Капитан">Tropik22~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">24.07.2009 / 21:44</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">117326</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=117326" id="TeamsRepeater_ctl29_lnkTeamInfo" target="_blank">Ж.Р.У.</a>&nbsp;
+				(<span class="white_bold">18,05</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl29_lblMemberCount" Title="Количество участников в команде">2</span> / <a href="/UserDetails.aspx?uid=57599" id="TeamsRepeater_ctl29_lnkCaptainInfo" target="_blank" Title="Капитан">STARY~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">15.10.2011 / 16:34</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">139332</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=139332" id="TeamsRepeater_ctl31_lnkTeamInfo" target="_blank">Жежовелла</a>&nbsp;
+				(<span class="white_bold">16,68</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl31_lblMemberCount" Title="Количество участников в команде">4</span> / <a href="/UserDetails.aspx?uid=1494636" id="TeamsRepeater_ctl31_lnkCaptainInfo" target="_blank" Title="Капитан">Иван Абрагимович</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">06.11.2014 / 13:25</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">13599</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=13599" id="TeamsRepeater_ctl33_lnkTeamInfo" target="_blank">клей</a>&nbsp;
+				(<span class="white_bold">15,9</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl33_lblMemberCount" Title="Количество участников в команде">5</span> / <a href="/UserDetails.aspx?uid=117953" id="TeamsRepeater_ctl33_lnkCaptainInfo" target="_blank" Title="Капитан">12oz.mouse~</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">09.02.2009 / 14:36</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">13756</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=13756" id="TeamsRepeater_ctl35_lnkTeamInfo" target="_blank">eMANcipation</a>&nbsp;
+				(<span class="white_bold">15,3</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl35_lblMemberCount" Title="Количество участников в команде">5</span> / <a href="/UserDetails.aspx?uid=178043" id="TeamsRepeater_ctl35_lnkCaptainInfo" target="_blank" Title="Капитан">anna_ka</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">17.02.2009 / 00:09</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">143085</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=143085" id="TeamsRepeater_ctl37_lnkTeamInfo" target="_blank">Команда V</a>&nbsp;
+				(<span class="white_bold">14,78</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl37_lblMemberCount" Title="Количество участников в команде">1</span> / <a href="/UserDetails.aspx?uid=63807" id="TeamsRepeater_ctl37_lnkCaptainInfo" target="_blank" Title="Капитан">Кофа Йох</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">15.05.2015 / 00:29</td>
+		</tr>
+	
+		<tr> 
+			<td colspan="4"><div class="hr" style="margin-top:5px;margin-bottom:5px;background-image:none;background-color:#008000;"><b></b></div>
+</td>
+		</tr>
+	
+		<tr>
+			<td nowrap="nowrap" class="padL10"><span class="yellow_darkgreen">#</span></td>
+			<td nowrap="nowrap" class="padL10">94944</td>
+			<td nowrap="nowrap" class="padL10">
+				<a href="/Teams/TeamDetails.aspx?tid=94944" id="TeamsRepeater_ctl39_lnkTeamInfo" target="_blank">Realision</a>&nbsp;
+				(<span class="white_bold">14,76</span> очка,&nbsp;
+				<span id="TeamsRepeater_ctl39_lblMemberCount" Title="Количество участников в команде">3</span> / <a href="/UserDetails.aspx?uid=97379" id="TeamsRepeater_ctl39_lnkCaptainInfo" target="_blank" Title="Капитан">URAGAN!</a>)
+			</td>
+			<td  class="padL10" nowrap="nowrap" align="right" width="100%">12.12.2010 / 22:19</td>
+		</tr>
+	
+		</table>
+		<div class="hr" style="margin-top:5px;background-image:none;background-color:#008000;"><b></b></div>
+
+		
+</form>
+<table cellpadding="0" cellspacing="0" border=0>
+	<tr><td valign="middle">
+	Поиск участников или команд:</td>
+	<td>&nbsp;<a href="/PlayerSearch.aspx" target="_blank" onclick="javascript:OpenSearchWindow();return false;"><img border="0" height="20" src="http://cdn.endata.cx/data/buttons/search_ru.gif" /></a></td>
+	</tr>
+</table>
+<div class="hr"><b></b></div>
+
+<div style="width:100%; display: ;" align="center"><a href="http://remix.en.cx/Teams/TeamList.aspx?page=1">1</a>&nbsp;&nbsp;2&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=3">3</a>&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=4">4</a>&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=5">5</a>&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=6">6</a>&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=7">7</a>&nbsp;&nbsp;<a href="http://remix.en.cx/Teams/TeamList.aspx?page=8">8</a><br/><br/></div>
+
+								</td>
+							</tr>
+						</table>
+					</td>					
+					
+					<td valign="top" width="205" id="tdContentRight">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr><td><div id="DivRightDesign"><div id="adminPanelLinkDiv" style="width: 173px; margin: auto;">
+<div class="enPnl1 border_rad5  pnOl leftPnlItem adminPnlLeft">
+<table class="tdWidth100p" style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="noPadMarg">
+<table class="noPadMarg" style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><a class="pd" href="/Addons.aspx?aid=6426">Правила домена</a></td>
+<td style="padding-left: 5px;" align="right"><a href="/Addons.aspx?aid=6426"><img src="http://cdn.endata.cx/images/icons/usermenu/dblRArrowYellow.gif" alt="" width="9" height="8" border="0" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--
+<br /><br />
+<span style="padding-left:10px;" _mce_style="padding-left: 10px;"><a href="http://remix.en.cx/Addons.aspx?aid=3597" _mce_href="/Addons.aspx?aid=3597"><img src="http://cdn.endata.cx/images/personal/6647/calend-logoS.gif" _mce_src="http://cdn.endata.cx/images/personal/6647/calend-logoS.gif" border="0"></a></span>
+-->
+<script type="text/javascript">// <![CDATA[
+function toggle(tr_id) {
+  tr = document.getElementById(tr_id);
+  if (tr.style.display=="none") {tr.style.display="inline"} else {tr.style.display="none"};
+}
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+var img = document.getElementsByTagName("a")
+for(var i=0;i<img.length;i++){
+if (img[i].title=="внешний форум") {img[i].text="Наши правила"; img[i].title="Наши правила"}
+}
+var img = document.getElementsByTagName("img")
+for(var i=0;i<img.length;i++){
+if (img[i].title=="внешний форум") {img[i].alt="Наши правила"; img[i].title="Наши правила"}
+}
+// ]]></script>
+<table style="display: none; width: 100%;" border="0" cellspacing="0" cellpadding="5px">
+<tbody>
+<tr>
+<td>
+<table style="width: 100%;" cellspacing="1" cellpadding="1" bgcolor="#1B7C00"><!--<tr class="topWinnerHead"><td align="center"  colspan="3">Результаты чемпионата</td></tr>-->
+<tbody>
+<tr class="topWinnerHead">
+<td style="text-align: center;">&#160;<strong>Место</strong></td>
+<td class="topWinners" align="center"><strong>Команда</strong></td>
+<td class="topWinners" align="center"><strong>Очки</strong></td>
+</tr>
+<!--1-->
+<tr style="background-color: #005c00;">
+<td align="center"><span class="gold_bold">1</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=151"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold">100 (<img src="http://d1.endata.cx/images/personal/6647/stat-stay.gif" alt="" />)</span></td>
+</tr>
+<!--2-->
+<tr style="background-color: #005c00;">
+<td align="center"><span class="gold_bold">2</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=4188"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold">50 (2<img src="http://d1.endata.cx/images/personal/6647/stat-up.gif" alt="" />)</span></td>
+</tr>
+<!--3-->
+<tr style="background-color: #005c00;">
+<td align="center"><span class="gold_bold">3</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=3440"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold">
+<span class="white_bold">25 (3<img src="http://d1.endata.cx/images/personal/6647/stat-down.gif" alt="" />)</span><br /></span></td>
+</tr>
+<!--4-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">4</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=2532"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--5-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">5</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=101"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--6-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">6</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=2533"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--7-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">7</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=9145"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--8-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">8</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=153"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--9-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">9</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=4665"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+<!--10-->
+<tr class="toWinnerItem">
+<td align="center"><span class="gold_bold">10</span></td>
+<td class="topWinners" align="center"><strong><a href="/Teams/TeamDetails.aspx?tid=2368"><br /></a></strong></td>
+<td class="topWinners" align="center"><span class="white_bold"><br /></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript" src="http://d1.endata.cx/images/personal/195011/_tucker_func.js"></script>
+<script type="text/javascript">// <![CDATA[
+	var my_en = new en_addon();
+// ]]></script>
+<script type="text/javascript" src="http://d1.endata.cx/images/personal/195011/awards_data.js"></script>
+<script type="text/javascript" src="http://d1.endata.cx/images/personal/195011/holidays_data.js"></script>
+<script type="text/javascript" src="http://d1.endata.cx/images/personal/195011/description_data.js"></script>
+<script type="text/javascript">// <![CDATA[
+	var today = new Date();
+	my_en.do_calendar(1,2,1,"#000000",today.getYear(),today.getMonth()+1);
+	// календарь (не за весь год, 2 месяца, в 1 колонку, черный фон, за этот год, с текущего месяца)
+// ]]></script></div></td></tr>
+							<tr><td><div class="spacer" style="width:205px"></div></td></tr>
+						</table>
+					</td>
+					
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr id="bottomLineRow">		
+		<td colspan="2" class="bottom_hr"></td>
+	</tr>
+	
+	<tr id="footerRow">
+		<td>			
+			<table id="footerTable" border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr id="trFooterContent">
+					<td ID="tdEn016" valign="middle" align="center" width="205" height="95" style="background:url(http://cdn.endata.cx/images/en016.gif);">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td colspan="3"><div class="spacer" style="width:205px"></div></td>
+							</tr>
+							<tr>
+								<td><div class="spacer" style="height:93px"></div></td>
+								<td align="center">
+								    <!-- BEGIN SITE LOCAL TIME -->
+									<b><span id="ctl03_dtmSystemTime">15.02.2018 23:43:14</span></b>
+									<!-- END SITE LOCAL TIME -->
+									<br/>
+									(<a target="_blank" href="/HowTo.aspx?about=UTC" onclick="return i2589504431.ShowDialog();">UTC</a><script type="text/javascript">//<![CDATA[
+
+ var i2589504431 = new EnDialogBox({"skin":"DefaultDialogSkin","width":666,"height":300,"title":"Помощь","btnHidden":"hddni2589504431","buttons":["dlgBtnOK"],"ajaxUrl":"/ALoader/Help.aspx?about=UTC"});
+//]]></script>&nbsp;+3)
+									<br/><br/>
+									<a href="http://www.en.cx/" target="_blank">www.en.cx</a>
+									<br/>
+									
+										<span class="Text4">
+										Encounter<SUP><span class="Text6">TM</span></SUP> Ltd.
+										<br/>
+										2004-2018 <a href="http://www.quotebook.us/" class="green no_decoration">&copy;</a>
+										</span>
+									
+									
+
+<script type="text/javascript">
+	(function () {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>									
+								</td>
+								<td><div class="spacer" style="height:93px"></div></td>
+							</tr>
+							<tr>
+								<td colspan="3"><div class="spacer" style="width:205px"></div></td>
+							</tr>
+						</table>
+					</td>
+					<td width="100%" id="footerCenter"><div id="DivBottomDesign"><p style="text-align: center;">&#160;<strong style="color: #ffffff;">П А Р Т Н Е Р Ы &#160; &#160; &#160; Н А Ш Е Г О &#160; &#160; &#160; П Р О Е К Т А</strong></p>
+&#160;
+<p><a title="Настоящее немецкое качество моторного масла!" href="http://www.metallenergo.by/?page=sub&amp;cat=10" target="_self"><img style="display: block; margin-left: auto; margin-right: auto;" src="http://cdn.endata.cx/images/personal/99848/JB_logo1.jpg" alt="" /></a></p></div></td>
+				</tr>		
+				
+					<tr id="trGreenLineFoot"><td colspan="2" style="background-color:Green;height:1px;"></td></tr>
+					<tr id="trLineCounters"><td colspan="2" align="center" style="background: #061C00 url('http://cdn.endata.cx/images/lines/line_counters.gif') repeat-x top;">
+
+
+</td></tr>									
+						
+			</table>
+		</td>
+	</tr>
+	
+</table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+setCookie("lang", "ru", "2019-02-15 20:43:14", "/");
+setCookie("Domain", "remix.en.cx", "2018-03-15 20:43:14", "/");
+//]]>
+</script>
+</body>
+</html>
