@@ -77,6 +77,12 @@ module Encounter
       end
     end
 
+    # Method to load list of countries, regions and cities
+    # available to use in filters.
+    #
+    # @return [Array<Hash>] Every item contains _id_, _name_ and _regions_
+    #   fields. _regions_ is Array of Hash, containig _id_, _name_ and
+    #   _cities_. _cities_ is Array of Has with _id_ and _name_ items.
     def calendar_regions
       @regions ||= parse_countries(load_page(@cal_url))
     end
