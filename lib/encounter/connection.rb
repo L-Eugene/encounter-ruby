@@ -12,6 +12,7 @@ module Encounter
     # @option options [String] :domain Domain to connect.
     # @option options [String] :network ('Encounter') Network to login.
     #   Can be _Encounter_ or _QuestUa_.
+    # @option options [String] :user_agent Browser identifier for connection.
     #
     # @example Connect using account
     #    Encounter::Connection.new(
@@ -59,7 +60,11 @@ module Encounter
     def new_faraday_connection
       Faraday.new(url: "http://#{@options[:domain]}") do |conn|
         conn.request :url_encoded
+        conn.use FaradayMiddleware::FollowRedirects
         conn.use :cookie_jar, jar: cookie_jar
+        if @options[:user_agent]
+          conn.headers[:user_agent] = @options[:user_agent]
+        end
         conn.adapter Faraday.default_adapter
       end
     end
