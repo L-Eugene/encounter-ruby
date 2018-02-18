@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage = ''
   spec.license = 'MIT'
 
-  spec.files = `git ls-files -z`.split("\x0")
+  spec.files = `git ls-files -z`.split("\x0").reject { |f| f =~ /^spec/ }
   spec.test_files = `git ls-files -z -- {test,spec,features}/*`.split("\x0")
 
   spec.require_paths = ['lib']
