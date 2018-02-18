@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'faraday', '~> 0.9'
   spec.add_runtime_dependency 'faraday-cookie_jar', '>= 0.0.6'
+  spec.add_runtime_dependency 'faraday_middleware', '~> 0.10'
   spec.add_runtime_dependency 'nokogiri', '~> 1.6'
 
   spec.add_development_dependency 'rake'

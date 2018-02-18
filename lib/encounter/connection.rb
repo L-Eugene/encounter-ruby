@@ -60,6 +60,7 @@ module Encounter
     def new_faraday_connection
       Faraday.new(url: "http://#{@options[:domain]}") do |conn|
         conn.request :url_encoded
+        conn.use FaradayMiddleware::FollowRedirects
         conn.use :cookie_jar, jar: cookie_jar
         if @options[:user_agent]
           conn.headers[:user_agent] = @options[:user_agent]

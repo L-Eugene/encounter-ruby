@@ -170,10 +170,10 @@ module Encounter
     end
 
     def load_data
-      dom_page = Nokogiri::HTML(@conn.page_get('/UserDetails.aspx', uid: uid))
+      dom_page = load_page('/UserDetails.aspx', uid: uid)
 
       raise 'No such player' unless dom_page.css('form#MainForm').empty?
-      assign_values parse_all(dom_page.css('td#tdContentCenter').first)
+      assign_values parse_all(dom_page.css('#tdContentCenter').first)
     end
   end
 end

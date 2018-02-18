@@ -1,5 +1,6 @@
 require 'faraday'
 require 'faraday-cookie_jar'
+require 'faraday_middleware'
 require 'json'
 require 'nokogiri'
 
