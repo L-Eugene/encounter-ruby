@@ -6,9 +6,12 @@ sites.
 
 ## Documentation
 
-## Usage example
+## Usage examples
 
-```require 'encounter'
+### Collect player information
+
+```ruby
+require 'encounter'
 
 connection = Encounter::Connection.new(
   domain: 'by.en.cx',
@@ -24,6 +27,30 @@ player = Encounter::Player.new(
 
 ### Collect domain announces
 
-### Collect player information
+```ruby
+require 'encounter'
+
+connection = Encounter::Connection.new(
+  domain: 'by.en.cx',
+  username: 'user',
+  password: 'password'
+)
+
+domain = Encounter::Domain.new(connection, 'by.en.cx')
+
+announces = domain.announces
+```
 
 ### Collect game information
+
+```ruby
+require 'encounter'
+
+connection = Encounter::Connection.new(
+  domain: 'by.en.cx',
+  username: 'user',
+  password: 'password'
+)
+
+domain = Encounter::Game.new(connection, domain: '')
+```
