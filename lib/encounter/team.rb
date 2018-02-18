@@ -107,8 +107,7 @@ module Encounter
     end
 
     def load_data
-      html_page = @conn.page_get('/Teams/TeamDetails.aspx', tid: tid)
-      dom_page = Nokogiri::HTML(html_page)
+      dom_page = load_page('/Teams/TeamDetails.aspx', tid: tid)
 
       raise 'No such team' if dom_page.css('#lnkTeamName').empty?
       assign_values parse_all(dom_page.css('td#tdContentCenter').first)

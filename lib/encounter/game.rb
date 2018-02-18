@@ -136,11 +136,10 @@ module Encounter
     end
 
     def load_data
-      html_page = @conn.page_get("http://#{domain}/GameDetails.aspx", gid: gid)
-      @dom_page = Nokogiri::HTML(html_page)
+      dom_page = load_page("http://#{domain}/GameDetails.aspx", gid: gid)
 
-      raise 'No such game' unless @dom_page.css('#boxCenterTopUsers').empty?
-      assign_values parse_all(@dom_page.css('table.gameInfo').first)
+      raise 'No such game' unless dom_page.css('#boxCenterTopUsers').empty?
+      assign_values parse_all(dom_page.css('table.gameInfo').first)
     end
   end
 end
